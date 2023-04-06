@@ -1,0 +1,3090 @@
+<!DOCTYPE html>
+<!-- 
+KTÜ Web Programlama 1. Dönem Ödevi 
+
+İrem Öztürk - 402573
+Barış Koç - 394812
+Hüseyin Aslan - 394788  
+-->
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <title>Anasayfa | KARADENİZ TEKNİK ÜNİVERSİTESİ</title>
+    <script
+      src="https://kit.fontawesome.com/d497048b92.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      
+      .navbar2 a {
+        text-decoration: none;
+        color: black;
+        font-size: small;
+      }
+      .amblem img {
+        height: 16vh;
+      }
+      .ryuk-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .ryuk-right {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+      }
+      .ryuk-div-button {
+        background-color: aliceblue;
+        transition: 1s;
+      }
+      .ryuk-div-button:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+        transition: 1s;
+      }
+      .ryuk-div-button:hover a {
+        color: white;
+        transition: 0.6s;
+      }
+      .ryuk-div-button a {
+        color: black;
+        transition: 0.6s;
+        text-decoration: none;
+      }
+      /* .ryuk-text-color-black {
+        color: black;
+      }
+      .ryuk-text-color-black:hover {
+        color: white;
+      } */
+      .ryuk-text-min {
+        color: white;
+        font-size: small;
+      }
+      .ryuk-text-med,
+      .ryuk-text-med a,
+      .ryuk-text-min,
+      .ryuk-text-min a {
+        color: white;
+        font-size: medium;
+        text-decoration: none;
+      }
+      .ryuk-text-max {
+        color: white;
+        font-size: xx-large;
+        font-weight: bold;
+      }
+      #kurumsalID {
+        display: none;
+        background-color: #00426a;
+      }
+      .ryuk-erisim-linkleri {
+        background-image: url("https://www.ktu.edu.tr/image/top_bg.png");
+      }
+      .ryuk-cursor-pointer {
+        cursor: pointer;
+      }
+      .ryuk-icon {
+        color: #00426a;
+      }
+      .ryuk-icon-baslik {
+        font-family: "HurmeBold", HurmeBold !important;
+        margin-bottom: 2px;
+        color: #00426a;
+        font-weight: 800;
+        line-height: 1;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .ryuk-icon-aciklama {
+        font-weight: 600;
+        font-size: 12px;
+        color: #808285;
+      }
+      .watashi-duyurular_container{
+        background-image: url(http://ktu.edu.tr/image/duyuru_bg.png);
+        padding-right: 100px;
+        padding-left: 200px;
+      
+      }
+      .watashi-duyuru-yazı-fontu{
+        color: #fff; 
+        font-size: 14px; 
+        line-height: 18px; 
+        margin-bottom: 5px;
+      }
+      .watashi-solcizgi{
+        float: left;
+        width: 20px;
+        height: 50px;
+        border-left: 6px solid #fff;
+      }
+      .watashi-sayfabaslik {
+        font-family:'Franklin Gothic Medium';
+        font-size: 30px;
+        color: #fff;
+      }
+      .watashi-dyeri{
+        margin: 0px;
+        color: #1eafc7;
+        font-size: 12px;
+      } 
+      .watashi-duyurugün{
+        font-family: HurmeBold;
+        color: #fff;
+        margin: 0px;
+        font-size: 30px;
+        line-height: 24px;
+        font-weight: bold;
+      }
+      .watashi-duyuruay{
+        margin: 0px;
+        color: #1eafc7;
+        background-color: #fff;
+        width: 100%;
+        font-size: 12px;
+        padding: 2px 5px;
+      }
+      .watashi-row{
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: calc(var(--bs-gutter-y) * -1);
+        margin-right: calc(var(--bs-gutter-x)/ -2);
+        margin-left: calc(var(--bs-gutter-x)/ -2)
+      }
+      .watashi-duyurularRenk:hover{
+        background-color: #1eafc7;
+      }
+      .watashi-logoRenk:hover{
+        filter:grayscale(0%);
+      }
+      .watashi-sayılarfont{
+        padding:15px;
+        color: #00426a;
+        text-align:center;
+      }
+      .watashi-countersayi{
+        margin-top:10px;
+        font-family: 'Franklin Gothic Medium';
+        font-size: 25px;
+      }
+      .watashi-sayibaslik{
+        font-size: 18px;
+        min-height: 54px;
+      }
+      .watashi-logo {
+        filter: grayscale(100%);
+      }
+      .watashi-img-fluid {
+        max-width: 100%;
+        height: auto;
+      }
+      .watashi-col-logo {
+        padding-left: 5px;
+        padding-right: 5px;    
+      }
+      .watashi-col-auto {
+        flex: 0 0 auto;
+        width: auto;
+      }
+      .glayfens-haberler-baslik {
+        font-family: HurmeSemiBold;
+        margin-top: .5rem;
+        font-size:18px;
+        color: #00426a;
+        min-height: 67px;
+        font-weight: bold;
+      }
+      .glayfens_cizgi {
+        float: left;
+        width: 20px;
+        height: 50px;
+        border-left: 6px solid #fff;
+      }
+      .glayfens_haber_yazi {
+        font-size:14px;
+        color:#6d6e71;
+        min-height: 63px;
+      }
+      .glayfens-etkinlikler-baslik {
+        color:#ffffff;
+        font-size:17px;
+        font-weight:  bold;
+        font-family: HurmeBold;
+        min-height: 58px;
+        margin-top: .5rem
+      }
+      .glayfens-etkinlikler-yazi {
+        font-size:14px; 
+        line-height: 18px;
+        color:#fff; 
+        min-height: 36px;
+      }
+      .glayfens-etkinlikler-tarih {
+        color:#fff;
+        margin:0px; 
+        font-family: HurmeBold; 
+        font-size: 30px; 
+        line-height: 24px;
+      }
+      .glayfens-etkinlikler-cizgi {
+        border-right: solid #d06464 1px;
+        text-decoration: none;
+      }
+      .glayfens-ay {
+        margin: 0px;
+        color: #1eafc7;
+        background-color: #fff;
+        width: 100%;
+        font-size: 12px;
+        padding: 2px 5px;
+      }
+      .glayfens-col-8 {
+        flex: 0 0 auto;
+        width: 66.6666666667%;
+      }
+      .glayfens-col-4 {
+        flex: 0 0 auto;
+        width: 33.3333333333%;
+      }
+      .glayfens-carousel {
+        position: relative;
+      }
+      .glayfens-akademikbasarilar-yazi{
+        margin-top: .5rem;
+        font-size:  1px; 
+        font-family: serif;
+        color:#5c5c5c; 
+      }
+      .glayfens-col-12 {
+        flex: 0 0 auto;
+        width: 100%;
+      }
+      .glayfens-background-renkdegisimi:hover{
+        background-color: #eef0f4;
+      }
+      .glayfens-background-renkdegisimi2:hover{
+        background-color: #e4e6ea;
+      }
+      .glayfens-text-renkdegisimi:hover{
+        color: #e0a526;
+      }
+      .glayfens-proje1 .glayfens-p {
+        color: #fff;
+        background-color: #c14c48;
+        font-size: 12px;
+        padding: 2px 5px;
+      }
+      .glayfens-dp1 {
+        margin: 0px;
+        color: #1eafc7;
+        background-color: #fff;
+        width: 100%;
+        font-size: 12px;
+        padding: 2px 5px;
+      }
+      .glayfens.proje2{
+        font-size: 18px;
+        color: #5c5c5c;
+      }
+
+      /* ============ desktop view ============ */
+      @media all and (min-width: 992px) {
+        .dropdown-menu li {
+          position: relative;
+        }
+        .nav-item .submenu {
+          display: none;
+          position: absolute;
+          left: 100%;
+          top: -7px;
+        }
+        .nav-item .submenu-left {
+          right: 100%;
+          left: auto;
+        }
+        .dropdown-menu > li:hover {
+          background-color: #f1f1f1;
+        }
+        .dropdown-menu > li:hover > .submenu {
+          display: block;
+        }
+      }
+      /* ============ desktop view .end// ============ */
+
+      /* ============ small devices ============ */
+      @media (max-width: 991px) {
+        .dropdown-menu .dropdown-menu {
+          margin-left: 0.7rem;
+          margin-right: 0.7rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+      /* ============ small devices .end// ============ */
+    </style>
+  </head>
+
+  <!-- ----------------------- HÜSEYİN ASLAN BAŞLANGIÇ --------------------------- -->
+  <body>
+    <div class="row navbar2 ryuk-erisim-linkleri p-1 ryuk-center">
+      <div class="col-7">
+        <!-- bosluk için kullanıldı -->
+      </div>
+      <div class="col-5 row">
+        <!-- En üstte sabit bar, içerisinde sosyal medyalara, 
+            faklı dil seçeneklerine ve anasayfaya erişim linkleri -->
+        <div class="col"><a href="https://www.ktu.edu.tr/">AnaSayfa</a></div>
+        <div class="col">
+          <a href="https://www.ktu.edu.tr/uls/sosyalmedyahesaplarimiz"
+            >Sosyal Medya</a
+          >
+        </div>
+        <div class="col">
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenu2"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              TR
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <li>
+                <button class="dropdown-item" type="button" onclick="">
+                  EN
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- ---------------------  Navbar bitiş ---------------------- -->
+<!-- ------------------------- dropdown menu başlangıç ------------------- -->
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-8 ryuk-center">
+          <div class="container-fluid row">
+            <div class="col-2">
+              <ul class="nav-item dropdown">
+                <!-- baslık kısmı -->
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  KURUMSAL
+                </a>
+
+                <!-- ortanca kısma geçiş -->
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#"> Genel </a>
+                    <ul class="submenu dropdown-menu">
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/" >Tarihçe</a>
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Misyon ve Vizyon</a></li>
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Genel Tanıtım</a>
+                      </li>
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Mevzuat</a>
+                      </li>
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Sosyal Yaşam</a>
+                      </li>
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Sanal Gezinti</a>
+                      </li>
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Harita</a>
+                      </li>
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Fahri Doktora</a>
+                      </li>
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Kalite Politikasi</a>
+                      </li>
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Statejik Plan</a>
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Uluslararası Üyeliklerimiz</a
+                        >
+                      </li>
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Akredite Birimler</a>
+                      </li>
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Kurumsal Kimlik</a>
+                      </li>
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Sayılarla KTÜ</a>
+                      </li>
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Tanıtım Sunumu</a>
+                      </li>
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Basında KTU</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Yönetim </a>
+                    <ul class="submenu dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Rektör</a></li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Rektör Yardımcıları</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Üniversite Senatosu</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Üniversite Yönetim Kurulu</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Rektör Danışmanları</a
+                        >
+                      </li>
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Genel Sekreter</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Genel Sekreter Yardımcıları</a
+                        >
+                      </li>
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Daire Başkanları</a>
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >İç Denetim Birimi Başkanlığı</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Organizasyon Şeması</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Önceki Rektörlerimiz</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Bağlı Birimler </a>
+                    <ul class="submenu dropdown-menu">
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Kurumsal İletişim Koordinatörlüğü</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Kurumsal Gelişim ve Planlama Koordinatörlüğü</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Dış İlişkiler Genel Koordinatörlüğü</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Dijital Dönüşüm Ofisi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Proje Üretim Merkezi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Öğretim Üyesi Yetiştirme Programı Koordinatörlüğü</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >MYO Koordinatörlüğü</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Kültür Hizmetleri Koordinatörlüğü</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >YLSY Burs Koordinatörlüğü</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Üniversite Seçmeli Dersler Koordinatörlüğü</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Kurullar ve Komisyonlar
+                    </a>
+                    <ul class="submenu dropdown-menu">
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">İç Kontrol</a>
+                      </li>
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Kalite Komisyonu</a>
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Strateji Geliştirme Kurulu</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Araştırma Üst Kurulu</a
+                        >
+                      </li>
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Eğitim Komisyonu</a>
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >KTÜ Şehir İş Birliği Komisyonu</a
+                        >
+                      </li>
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">KTÜ Danışma Kurulu</a>
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Uluslararasılaşma Çalışma Grubu</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Diğer İdari ve Teknik Komisyonlar</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Akreditasyon Çalışma Grubu</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Sanayi İş Birliği Çalışma Grubu</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Enstitü Çalışma Grubu</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >UYGAR Çalışma Grubu</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Bilimsel Araştırma Projeleri Komisyonu</a
+                        >
+                      </li>
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Etik Kurullar</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Kişisel Verilerin Korunması
+                    </a>
+                    <ul class="submenu dropdown-menu">
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Aydınlatma Metni</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+            <div class="col-2">
+              <ul class="nav-item dropdown">
+                <!-- baslık kısmı -->
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  ÖĞRENCİ
+                </a>
+
+                <!-- ortanca kısma geçiş -->
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#"> Birimler </a>
+                    <ul class="submenu dropdown-menu">
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Öğrenci İşleri Daire Başkanlığı</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Uluslararası Öğrenci Birimi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Yabancı Uyruklu Öğrenci Sınavı</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Türkçe Öğretimi Uyg. ve Araş. Mrk.</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Değişim Programları Koordinatörlüğü</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Kariyer Geliştirme Uyg. ve Araş. Mrk.</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Engelli Öğrenci Birimi</a
+                        >
+                      </li>
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Öğrenci Kulüpleri</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> E-Öğrenci </a>
+                    <ul class="submenu dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="#">Öğrenci Girişi</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Mezun Bilgi Sistemi</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Staj İşlemleri</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Memnuniyet Anketi</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Bize Yazın</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Eğitim </a>
+                    <ul class="submenu dropdown-menu">
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Akademik Takvim</a>
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >AKTS Ders Bilgi Paketi</a
+                        >
+                      </li>
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Dönem Dersleri</a>
+                      </li>
+                       <li onclick="location.href='https://www.ktu.edu.tr/';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Ders Programı</a>
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Uzaktan Eğitim Merkezi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Sürekli Eğitim Merkezi</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Aday Öğrenci </a>
+                    <ul class="submenu dropdown-menu">
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Aday Öğrencilerimiz</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+
+
+
+            <div class="col-2">
+              <ul class="nav-item dropdown">
+                <!-- baslık kısmı -->
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  AKADEMİK
+                </a>
+
+                <!-- ortanca kısma geçiş -->
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#"> Fakülteler </a>
+                    <ul class="submenu dropdown-menu">
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Diş Hekimliği Fakültesi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Eczacılık Fakültesi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Edebiyat Fakültesi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Fen Fakültesi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >İktisadi ve İdari Bilimler Fakültesi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Mimarlık Fakültesi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Mühendislik Fakültesi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Of Teknoloji Fakültesi </a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Orman Fakültesi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Sağlık Bilimleri Fakültesi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Sürmene Deniz Bilimleri Fakültesi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Tıp Fakültesi</a
+                        >
+                      
+
+                      
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Enstitüler </a>
+                    <ul class="submenu dropdown-menu">
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Adli Bilimler Enstitüsü</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Deniz Bilimleri ve Teknolojisi Enstitüsü</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Fen Bilimleri Enstitüsü</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Karadeniz Araştırmaları Enstitüsü</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Sağlık Bilimleri Enstitüsü</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Sosyal Bilimler Enstitüsü</a
+                        >
+                      </li>
+                      
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Yüksekokullar </a>
+                    <ul class="submenu dropdown-menu">
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Yabancı Diller Yüksekokulu</a
+                        >
+                      </li>
+
+                      
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Meslek Yüksekokulları </a>
+                    <ul class="submenu dropdown-menu">
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Araklı Ali Cevat Özyurt Meslek Yüksekokulu</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Arsin Meslek Yüksekokulu</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Çaykara Meslek Yüksekokulu</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Maçka Meslek Yüksekokulu</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Of Meslek Yüksekokulu</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Sağlık Hizmetleri Meslek Yüksekokulu</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Sürmene Abdullah Kanca Meslek Yüksekokulu</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Trabzon Meslek Yüksekokulu</a
+                        >
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Rektörlüğe Bağlı Birimler </a>
+                    <ul class="submenu dropdown-menu">
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Atatürk İlkeleri ve İnkılap Tarihi Bölümü</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Beden Eğitimi Bölümü</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Güzel Sanatlar Bölümü</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Türk Dili Bölümü</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Yabancı Diller Bölümü</a
+                        >
+                      </li>
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                    </ul>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+
+            <div class="col-2">
+              <ul class="nav-item dropdown">
+                <!-- baslık kısmı -->
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  İDARİ
+                </a>
+
+                <!-- ortanca kısma geçiş -->
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#"> Genel Sekreterlik </a>
+                    <ul class="submenu dropdown-menu">
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Genel Sekreterlik</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Üniversite Yönetim Kurulu Kararları</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Senato Kararları</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Süreçler, Prosedürler, İş Akışları</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Formlar</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >KTÜ İdari Takvim</a
+                        >
+                      </li>
+                      
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="#">Daire Başkanlıkları </a>
+                    <ul class="submenu dropdown-menu">
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Bilgi İşlem Daire Başkanlığı</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >İdari ve Mali İşler Daire Başkanlığı</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Kütüphane ve Dokümantasyon Daire Başkanlığı</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Öğrenci İşleri Daire Başkanlığı</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Personel Daire Başkanlığı</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Sağlık Kültür ve Spor Daire Başkanlığı</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Strateji Geliştirme Daire Başkanlığı</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Yapı İşleri ve Teknik Daire Başkanlığı
+                          </a
+                        >
+                      </li>
+                      
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="#">Diğer Birimler </a>
+                    <ul class="submenu dropdown-menu">
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Dış İlişkiler Genel Koordinatörlüğü</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Döner Sermaye İşletme Müdürlüğü</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Hukuk Müşavirliği</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Öğretim Üyesi Yetiştirme Programı</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Sivil Savunma Uzmanlığı</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >İşyeri Sağlık ve Güvenlik Birimi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Bilgi Edinme Birimi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Mali İşlemler Destek Birimi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Sıfır Atık Koordinatörlüğü</a
+                        >
+                      </li>
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                    </ul>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+
+            <div class="col-2">
+              <ul class="nav-item dropdown">
+                <!-- baslık kısmı -->
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  ARAŞTIRMA
+                </a>
+
+                <!-- ortanca kısma geçiş -->
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#"> Araştırma Üniversitesi </a>
+                    <ul class="submenu dropdown-menu">
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Araştırma Üniversitesi</a
+                        >
+                      </li>
+                      
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Uygulama ve Araştırma Merkezleri </a>
+                    <ul class="submenu dropdown-menu">
+                      <li onclick="location.href='#';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Atatürk İlkeleri ve İnkılap Tarihi UYGAR</a></li>
+                      <li onclick="location.href='#';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Cerrahi UYGAR</a></li>
+                      <li onclick="location.href='#';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Çevre Sorunları UYGAR</a></li>
+                      <li onclick="location.href='#';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Fındık Çay UYGAR</a></li>
+                      <li onclick="location.href='#';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Heyelan UYGAR</a></li>
+                      <li onclick="location.href='#';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">İlaç ve Farmasötik Teknoloji UYGAR</a></li>
+                      <li onclick="location.href='#';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Kadın Çalışmaları UYGAR</a></li>
+                      <li onclick="location.href='#';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Kariyer Geliştirme UYGAR</a></li>
+                      <li onclick="location.href='#';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Manyetik Malzemeler Tasarım ve Üretim UYGAR</a></li>
+                      <li onclick="location.href='#';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Medikal Cihaz Tasarım ve Üretimi UYGAR</a></li>
+                      <li onclick="location.href='#';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Merkezi Araştırma Laboratuvarı UYGAR </a></li>
+                      <li onclick="location.href='#';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Saadettin Güner Yakıt UYGAR</a></li>
+                      <li onclick="location.href='#';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Stratejik Araştırma Merkezi</a></li>
+                      <li onclick="location.href='#';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Sürekli Eğitim UYGAR</a></li>
+                      <li onclick="location.href='#';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Teknoloji Transferi UYGAR</a></li>
+                      <li onclick="location.href='#';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Türkçe Öğretimi UYGAR</a></li>
+                      <li onclick="location.href='#';"><a class="dropdown-item" href="https://www.ktu.edu.tr/">Uzaktan Eğitim UYGAR</a></li>
+
+                      
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Laboratuvarlar </a>
+                    <ul class="submenu dropdown-menu">
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Merkezi Araştırma Laboratuvarı</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Laboratuvar Yönetim Sistemi</a
+                        >
+                      </li>
+                      
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Etik Kurallar </a>
+                    <ul class="submenu dropdown-menu">
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Diş Hekimliği Fakültesi Bilimsel Araştırmalar Etik Kurulu</a
+                        >
+                      </li>
+                      
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Fen ve Mühendislik Etik Kurulu</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Hayvan Deneyleri Yerel Etik Kurulu</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Klinik Araştırmalar Etik Kurulu</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Sağlık Bilimleri Etik Kurulu</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Sosyal ve Beşeri Bilimler Etik Kurulu</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Tıp Fakültesi Bilimsel Araştırmalar Etik Kurulu</a
+                        >
+                      </li>
+                      
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Proje </a>
+                    <ul class="submenu dropdown-menu">
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >BAP Koordinasyon Birimi</a
+                        >
+                      </li>
+                      
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Diğer </a>
+                    <ul class="submenu dropdown-menu">
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >KTÜ Yayınları</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Dergilerimiz</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Trabzon Teknokent</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Araştırma Grupları</a
+                        >
+                      </li>
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                    </ul>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+
+            <!-- --------------- -->
+
+            <div class="col-2">
+              <ul class="nav-item dropdown">
+                <!-- baslık kısmı -->
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  HIZLI ERİŞİM
+                </a>
+
+                <!-- ortanca kısma geçiş -->
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#"> E-Hizmetler </a>
+                    <ul class="submenu dropdown-menu">
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >KTÜ E-Posta</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >KTÜ AVES</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >KTÜ BAPSİS</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >KTÜ DAPSİS</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Web Yönetim Sistemi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Kampüs Kart</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Online KTÜ</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >1955KTÜ Online Satış Mağazası</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Satın Alma İlanları</a
+                        >
+                      </li>
+                      
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Bilgi İşlem </a>
+                    <ul class="submenu dropdown-menu">
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Bilgi İşlem Destek Sistemi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Elektronik Belge Yönetim Sistemi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Bilgi İşlem Yardım Kılavuzu</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Bilgi Yönetim Sistemi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Tahakkuk Ek Ders</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Dönem Dersleri</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Maaş Kupürü</a
+                        >
+                      </li>
+                      
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Eğitim </a>
+                    <ul class="submenu dropdown-menu">
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Memur Akademisi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >İş Sağlığı ve Güvenliği Temel Eğitimi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Uzaktan Eğitim Sistemi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Ders Programı</a
+                        >
+                      </li>
+                      
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Toplumsal Hizmetler </a>
+                    <ul class="submenu dropdown-menu">
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Diş Hekimliği Fakültesi Hastanesi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Farabi Hastanesi</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Sosyal Tesisler</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Kültür ve Kongre Merkezleri</a
+                        >
+                      </li>
+                      <li onclick="location.href='https://www.ktu.edu.tr/';">
+                        <a class="dropdown-item" href="https://www.ktu.edu.tr/"
+                          >Ziyaretçi Kayıt Formu</a
+                        >
+                      </li>
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                    </ul>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+<!-- ----------- -->
+          </div>
+
+
+<!-- ------------------- yedek navbar ------------------------ -->
+          <!-- <div
+          class="col-md-1 text-wrap ryuk-center ryuk-div-button rounded"
+          onclick="myFunctionKurumsal()"
+        >
+          Kurumsal
+        </div>
+        <div
+          class="col-md-1 text-wrap ryuk-center ryuk-div-button rounded"
+          onclick="myFunctionKurumsal()"
+        >
+          Öğrenci
+        </div>
+        <div
+          class="col-md-1 text-wrap ryuk-center ryuk-div-button rounded"
+          onclick="myFunctionKurumsal()"
+        >
+          Akademik
+        </div>
+        <div
+          class="col-md-1 text-wrap ryuk-center ryuk-div-button rounded"
+          onclick="myFunctionKurumsal()"
+        >
+          İdari
+        </div>
+        <div
+          class="col-md-1 text-wrap ryuk-center ryuk-div-button rounded"
+          onclick="myFunctionKurumsal()"
+        >
+          Araştırma
+        </div>
+        <div
+          class="col-md-1 text-wrap ryuk-center ryuk-div-button rounded"
+          onclick="myFunctionKurumsal()"
+        >
+          Hızli Erişim
+        </div> -->
+        </div>
+        <div class="col-md-4 text-wrap ryuk-right amblem ryuk-cursor-pointer">
+          <img onclick="location.href='https://www.ktu.edu.tr/';"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Karadeniz_Technical_University_logo.svg/2560px-Karadeniz_Technical_University_logo.svg.png"
+            alt="ktu amblem"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid mt-1" id="kurumsalID">
+      <div class="row d-flex justify-content-around">
+        <div class="col ryuk-center ryuk-text-max p-5 border">KURUMSAL</div>
+
+        <div class="col ryuk-text-med">
+          <div class="container-fluid">
+            <div class="row border-bottom border-2 ryuk-hover-underline">
+              <a href="">Genel</a>
+            </div>
+            <div class="row">
+              <a href="">Yönetim</a>
+            </div>
+            <div class="row">
+              <a href="">Bağlı Birimler</a>
+            </div>
+            <div class="row">
+              <a href="">Kurullar Ve Komisyonlar</a>
+            </div>
+            <div class="row">
+              <a href="">Kişisel Verilerin Korunması</a>
+            </div>
+          </div>
+        </div>
+        <div class="col ryuk-text-min">
+          <div class="container-fluid">
+            <div class="row border-bottom border-2 ryuk-hover-underline">
+              <a href="">Tarihçe</a>
+            </div>
+            <div class="row">
+              <a href="">Misyon Ve Vizyon</a>
+            </div>
+            <div class="row">
+              <a href="">Genel Tanıtım</a>
+            </div>
+            <div class="row">
+              <a href="">Mevzuat</a>
+            </div>
+            <div class="row">
+              <a href="">Sosyal Yaşam</a>
+            </div>
+            <div class="row">
+              <a href="">Sanal Gezinti</a>
+            </div>
+            <div class="row">
+              <a href="">Harita</a>
+            </div>
+            <div class="row">
+              <a href="">Fahri Doktora</a>
+            </div>
+          </div>
+        </div>
+        <div class="col ryuk-text-min">
+          <div class="container-fluid">
+            <div class="row border-bottom border-2 ryuk-hover-underline">
+              <a href="">Kalite Politikası</a>
+            </div>
+            <div class="row">
+              <a href="">Stratejik Plan</a>
+            </div>
+            <div class="row">
+              <a href="">Uluslararası Üyeliklerimiz</a>
+            </div>
+            <div class="row">
+              <a href="">Akredite Birimler</a>
+            </div>
+            <div class="row">
+              <a href="">Kurumsal Kimlik</a>
+            </div>
+            <div class="row">
+              <a href="">Sayılarla Ktü</a>
+            </div>
+            <div class="row">
+              <a href="">Tanıtım Sunumu</a>
+            </div>
+            <div class="row">
+              <a href="">Basında KTÜ</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- ----------------- karosel başlangıç ----------------------- -->
+    <div class="container">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide mt-3"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://www.ktu.edu.tr/slayt/slaytrG9EgQ.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://www.ktu.edu.tr/slayt/slaytYh9Kxc.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://www.ktu.edu.tr/slayt/tr_e6f636.gif"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+<!-- -----------------   bazı link erişim kısımları ------------------------ -->
+    <div class="container-fluid ryuk-erisim-linkleri ">
+      <div class="container">
+        <div class="row border">
+          <div
+            class="col border ryuk-cursor-pointer"
+            onclick="location.href='https://bys.ktu.edu.tr/';"
+          >
+            <div class="ryuk-icon">
+              <i class="fas fa-window-restore" style="font-size: 20px"></i>
+            </div>
+            <div class="ryuk-icon-baslik">BYS</div>
+            <div class="ryuk-icon-aciklama">Bilgi Yönetim Sistemi</div>
+          </div>
+
+          <div
+            class="col border ryuk-cursor-pointer"
+            onclick="location.href='https://ebys.ktu.edu.tr/';"
+          >
+            <div class="ryuk-icon">
+              <i class="fas fa-file-signature" style="font-size: 20px"></i>
+            </div>
+            <div class="ryuk-icon-baslik">EBYS</div>
+            <div class="ryuk-icon-aciklama">
+              Elektronik Belge Yönetim Sistemi
+            </div>
+          </div>
+
+          <div
+            class="col border ryuk-cursor-pointer"
+            onclick="location.href='https://www.ktu.edu.tr/bilgiislem/eposta';"
+          >
+            <div class="ryuk-icon">
+              <i class="fas fa-mail-bulk" style="font-size: 20px"></i>
+            </div>
+            <div class="ryuk-icon-baslik">Webmail</div>
+            <div class="ryuk-icon-aciklama">KTÜ E-Posta Hizmeti</div>
+          </div>
+
+          <div
+            class="col border ryuk-cursor-pointer"
+            onclick="location.href='https://www.ktu.edu.tr/yonetim';"
+          >
+            <div class="ryuk-icon">
+              <i class="fas fa-check-square" style="font-size: 20px"></i>
+            </div>
+            <div class="ryuk-icon-baslik">Strateji & Kalite</div>
+            <div class="ryuk-icon-aciklama">Kurumsal Gelişim ve Planlama</div>
+          </div>
+
+          <div
+            class="col border ryuk-cursor-pointer"
+            onclick="location.href='https://www.ktu.edu.tr/kik';"
+          >
+            <div class="ryuk-icon">
+              <i class="fas fa-tty" style="font-size: 20px"></i>
+            </div>
+            <div class="ryuk-icon-baslik">Kurumsal İletişim</div>
+            <div class="ryuk-icon-aciklama">Web, Radyo TV, Gazete</div>
+          </div>
+
+          <div
+            class="col border ryuk-cursor-pointer"
+            onclick="location.href='https://www.ktu.edu.tr/library';"
+          >
+            <div class="ryuk-icon">
+              <i class="fas fa-book" style="font-size: 20px"></i>
+            </div>
+            <div class="ryuk-icon-baslik">Kütüphane</div>
+            <div class="ryuk-icon-aciklama">KTÜ Kütüphanesi</div>
+          </div>
+
+          <div
+            class="col border ryuk-cursor-pointer"
+            onclick="location.href='https://uek.ktu.edu.tr/';"
+          >
+            <div class="ryuk-icon">
+              <i class="fas fa-podcast" style="font-size: 20px"></i>
+            </div>
+            <div class="ryuk-icon-baslik">Uzem</div>
+            <div class="ryuk-icon-aciklama">KTÜ Uzaktan Eğitim</div>
+          </div>
+
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- -----------------  İrem Öztürk Başlangıç --------------------------- -->
+<!----------------------------------------DUYURULAR BAŞLANGIÇ------------------------------------------>
+<div class="container-fluid watashi-duyurular_container ">
+  <!--duyurular yazısı için yer ayarladık-->
+  <div class="container" style="padding: 0px !important;">
+    <div class="watashi-row">
+      <div class="col-12" style="padding:20px;padding-left:0px;">
+        <div class="watashi-solcizgi"></div>
+        <div style="float:left;padding-top:7px;">
+          <h1 class="watashi-sayfabaslik ">duyurular</h1>
+        </div>
+      </div>
+    </div>
+    <!--duyurular yeri için yer ayarladık-->
+    <div class="watashi-row">
+      <!--ID tanımladık ki buton bunu okuyup buraya gitsin-->
+      <div id="carousel-duyuru" class="carousel slide" data-bs-ride="false" style="padding: 0px;">
+        <div class="carousel-item active"> <!--Kaydırma işlemi-->
+          <div class="row" style="padding-left: 12px; padding-right: 12px;">
+            <a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded watashi-duyurularRenk"  href="https://www.ktu.edu.tr/tr/duyuru/2022-2023-egitim-ve-ogretim-yili-bahar-donemine-iliskin%C2%A0duyuru" style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;" >
+              <div class="row h-100" >
+                <div class="col-auto align-self-end" style="padding-left:0px;">
+                  <h3 class="watashi-duyurugün">31</h3>
+                  <p class="watashi-duyuruay">Mart</p>
+                </div>
+                <div class="col align-self-end" style="padding-left:0px;">
+                  <div class="watashi-duyuru-yazı-fontu" style="min-height: 54px;">2022-2023 Eğitim ve Öğretim Yılı Bahar Dönemine İlişkin&nbsp;Duyuru</div>
+                  <p class="watashi-dyeri">Rektörlük</p>
+                </div>
+              </div>
+            </a>
+            <a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded watashi-duyurularRenk" href="https://www.ktu.edu.tr/tr/duyuru/sozlesmeli-bilisim-personeli-alim-ilani" style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+              <div class="row h-100">
+                <div class="col-auto align-self-end" style="padding-left:0px;">            
+                  <h3 class="watashi-duyurugün">27</h3>
+                  <p class="watashi-duyuruay">Mart</p>       
+                </div>             
+                <div class="col align-self-end" style=" padding-left:0px;">
+                  <div class="watashi-duyuru-yazı-fontu" style="min-height: 54px;">Sözleşmeli Bilişim Personeli Alım İlanı</div>
+                    <p class="watashi-dyeri">KTÜ Rektörlüğü</p>
+                  </div>
+                </div>
+              </a>
+              <a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded watashi-duyurularRenk" href="https://www.ktu.edu.tr/personel/duyuru/30032022-tarihli-4-b-sozlesmeli-personel-alim-ilanina-yapilan-basvurular-sonucu-yerlesmeye-hak-kazanan-yedek-adaylara-iliskin-duyuru" target="_blank" style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+                <div class="row h-100">
+                  <div class="col-auto align-self-end" style="padding-left:0px;">            
+                    <h3 class="watashi-duyurugün">24</h3>
+                    <p class="watashi-duyuruay">Mart</p>       
+                  </div>             
+                <div class="col align-self-end" style=" padding-left:0px;">
+                  <div class="watashi-duyuru-yazı-fontu" style="min-height: 54px;">30.03.2022 Tarihli 4/B Sözleşmeli Personel Alım İlanına Yapılan Başvurular Sonucu Yerleşmeye Hak Kazanan Yedek Adaylara İlişkin Duyuru</div>
+                    <p class="watashi-dyeri">Personel Dairesi Başkanlığı</p>
+                  </div>
+                </div>
+              </a>
+              <a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded watashi-duyurularRenk" href="https://www.ktu.edu.tr/personel/duyuru/28062022-tarihli-4-b-sozlesmeli-personel-alim-ilanina-yapilan-basvurular-sonucu-yerlesmeye-hak-kazanan-yedek-adaylara-iliskin-duyuru" target="_blank" style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+                <div class="row h-100">
+                  <div class="col-auto align-self-end" style="padding-left:0px;">            
+                    <h3 class="watashi-duyurugün">24</h3>
+                    <p class="watashi-duyuruay">Mart</p>       
+                  </div>             
+                  <div class="col align-self-end" style=" padding-left:0px;">
+                    <div class="watashi-duyuru-yazı-fontu" style="min-height: 54px;">28.06.2022 Tarihli 4/B Sözleşmeli Personel Alım İlanına Yapılan Başvurular Sonucu Yerleşmeye Hak Kazanan Yedek Adaylara İlişkin Duyuru</div>
+                      <p class="watashi-dyeri">Personel Dairesi Başkanlığı</p>
+                    </div>
+                  </div>
+              </a>
+              <a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded watashi-duyurularRenk" href="https://www.ktu.edu.tr/ormanmuhendisligi/duyuru/2023-yili-orman-muhendisligi-bolumu-ilmi-huviyet-tespit-sinavi" target="_blank" style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+                <div class="row h-100">
+                  <div class="col-auto align-self-end" style="padding-left:0px;">            
+                    <h3 class="watashi-duyurugün">20</h3>
+                    <p class="watashi-duyuruay">Mart</p>       
+                  </div>             
+                  <div class="col align-self-end" style=" padding-left:0px;">
+                    <div class="watashi-duyuru-yazı-fontu" style="min-height: 54px;">2023 Yılı Orman Mühendisliği Bölümü İlmi Hüviyet Tespit Sınavı</div>
+                      <p class="watashi-dyeri">Orman Mühendisliği Bölüm Başkanlığı</p>
+                    </div>
+                  </div>
+              </a>
+              <a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded watashi-duyurularRenk" href="https://www.ktu.edu.tr/muhendislik/duyuru/2023-yili-ilmi-huviyet-sinav-takvimi" target="_blank" style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+                <div class="row h-100">
+                  <div class="col-auto align-self-end" style="padding-left:0px;">            
+                    <h3 class="watashi-duyurugün">15</h3>
+                    <p class="watashi-duyuruay">Mart</p>       
+                  </div>             
+                  <div class="col align-self-end" style=" padding-left:0px;">
+                    <div class="watashi-duyuru-yazı-fontu" style="min-height: 54px;">2023 Yılı İlmi Hüviyet Sınav Takvimi</div>
+                      <p class="watashi-dyeri">Mühendislik Fak.</p>
+                    </div>
+                  </div>
+              </a>
+          </div>
+        </div>
+        <div class="carousel-item"> <!--2.sayfada belirmesini sağlıyor.Üst üste bindirmiyor-->
+          <div class="row" style="padding-left: 12px; padding-right: 12px;">
+            <a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded watashi-duyurularRenk" href="https://www.ktu.edu.tr/ofinaf/duyuru/2022-projesi-erasmus-ogrenci-staj-hareketliligi-2-basvuru-donemi-baslamistir" target="_blank" style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+              <div class="row h-100">
+                <div class="col-auto align-self-end" style="padding-left:0px;">            
+                  <h3 class="watashi-duyurugün">13</h3>
+                  <p class="watashi-duyuruay">Mart</p>       
+                </div>             
+                <div class="col align-self-end" style=" padding-left:0px;">
+                  <div class="watashi-duyuru-yazı-fontu" style="min-height: 54px;">2022 Projesi Erasmus+ Öğrenci Staj Hareketliliği 2. Başvuru Dönemi Başlamıştır</div>
+                  <p class="watashi-dyeri">KTÜ Değişim Programları Koordinatörlüğü</p>
+                </div>
+              </div>
+            </a>
+
+            <a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded watashi-duyurularRenk" href="https://www.ktu.edu.tr/ofinaf/duyuru/2023-24-akademik-yili-erasmus-ogrenim-hareketliligi-basvurulari-baslamistir" target="_blank" style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+              <div class="row h-100">
+                <div class="col-auto align-self-end" style="padding-left:0px;">            
+                  <h3 class="watashi-duyurugün">10</h3>
+                  <p class="watashi-duyuruay">Mart</p>       
+                </div>             
+                <div class="col align-self-end" style=" padding-left:0px;">
+                  <div class="watashi-duyuru-yazı-fontu" style="min-height: 54px;">2023-24 Akademik Yılı Erasmus+ Öğrenim Hareketliliği Başvuruları Başlamıştır</div>
+                  <p class="watashi-dyeri">KTÜ Değişim Programları Koordinatörlüğü</p>
+                </div>
+              </div>
+            </a>
+
+            <a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded watashi-duyurularRenk" href="https://www.ktu.edu.tr/sgdb/duyuru/universitemiz-2022-yili-idare-faaliyet-raporu" target="_blank" style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+              <div class="row h-100">
+                <div class="col-auto align-self-end" style="padding-left:0px;">            
+                  <h3 class="watashi-duyurugün">01</h3>
+                  <p class="watashi-duyuruay">Mart</p>       
+                </div>             
+                <div class="col align-self-end" style=" padding-left:0px;">
+                  <div class="watashi-duyuru-yazı-fontu" style="min-height: 54px;">Üniversitemiz 2022 Yılı İdare Faaliyet Raporu</div>
+                  <p class="watashi-dyeri">Strateji Geliştirme Daire Başkanlığı</p>
+                </div>
+              </div>
+            </a>
+            <a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded watashi-duyurularRenk" href="https://www.ktu.edu.tr/personel/duyuru/sozlesmeli-bilisim-personeli-alim-ilani" target="_blank" style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+              <div class="row h-100">
+              <div class="col-auto align-self-end" style="padding-left:0px;">            
+                <h3 class="watashi-duyurugün">28</h3>
+                <p class="watashi-duyuruay">Şubat</p>       
+              </div>             
+              <div class="col align-self-end" style=" padding-left:0px;">
+                <div class="watashi-duyuru-yazı-fontu" style="min-height: 54px;">Sözleşmeli Bilişim Personeli Alım İlanı</div>
+                <p class="watashi-dyeri">Personel Daire Başkanlığı</p>
+              </div>
+              </div>
+            </a>
+            <a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded watashi-duyurularRenk" href="https://www.ktu.edu.tr/personel/duyuru/31-aralik-2022-tarihinde-ilan-edilen-arastirma-gorevlisi-kadrolarina-basvuran-adaylarin-nihai-degerlendirme-sonuclari" target="_blank" style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+              <div class="row h-100">
+                <div class="col-auto align-self-end" style="padding-left:0px;">            
+                  <h3 class="watashi-duyurugün">22</h3>
+                  <p class="watashi-duyuruay">Şubat</p>       
+                </div>             
+              <div class="col align-self-end" style=" padding-left:0px;">
+                <div class="watashi-duyuru-yazı-fontu" style="min-height: 54px;">31 Aralık 2022 Tarihinde İlan Edilen Araştırma Görevlisi Kadrolarına Başvuran Adayların Nihai Değerlendirme Sonuçları</div>
+                <p class="watashi-dyeri">Personel Daire Başkanlığı</p>
+              </div>
+              </div>
+            </a>
+            <a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded watashi-duyurularRenk" href="https://www.ktu.edu.tr/tr/duyuru/2022-2023-egitim-ogretim-yili-bahar-donemine-iliskin-duyuru" style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+              <div class="row h-100">
+                <div class="col-auto align-self-end" style="padding-left:0px;">            
+                  <h3 class="watashi-duyurugün">20</h3>
+                  <p class="watashi-duyuruay">Şubat</p>       
+                </div>             
+                <div class="col align-self-end" style=" padding-left:0px;">
+                  <div class="watashi-duyuru-yazı-fontu" style="min-height: 54px;">2022-2023 Eğitim-Öğretim Yılı Bahar Dönemine İlişkin Duyuru</div>
+                  <p class="watashi-dyeri">Rektörlük</p>
+                </div>
+              </div>
+            </a>    
+          </div>    
+        </div>
+        <div class="carousel-item"> <!--3.sayfa başlıyor-->
+          <div class="row" style="padding-left: 12px; padding-right: 12px;">
+            <a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded watashi-duyurularRenk" href="https://www.ktu.edu.tr/tr/duyuru/2022-2023-bahar-yariyili-egitim-ve-ogretimine-iliskin-sorular-ve-cevaplar" style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+              <div class="row h-100">
+                <div class="col-auto align-self-end" style="padding-left:0px;">            
+                  <h3 class="watashi-duyurugün">19</h3>
+                  <p class="watashi-duyuruay">Şubat</p>       
+                </div>             
+                <div class="col align-self-end" style=" padding-left:0px;">
+                  <div class="watashi-duyuru-yazı-fontu" style="min-height: 54px;">2022-2023 Bahar Yarıyılı Eğitim ve Öğretimine İlişkin Sorular ve Cevaplar</div>
+                  <p class="watashi-dyeri">Rektörlük</p>
+                </div>
+              </div>
+            </a>
+            <a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded watashi-duyurularRenk" href="https://www.ktu.edu.tr/tr/duyuru/yuksekogretim-kurulu-tarafindan-2022-2023-egitim-ogretim-yili-bahar-donemine-iliskin-basin-aciklamasi" style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+              <div class="row h-100">
+                <div class="col-auto align-self-end" style="padding-left:0px;">            
+                  <h3 class="watashi-duyurugün">17</h3>
+                  <p class="watashi-duyuruay">Şubat</p>       
+                </div>             
+                <div class="col align-self-end" style=" padding-left:0px;">
+                  <div class="watashi-duyuru-yazı-fontu" style="min-height: 54px;">Yükseköğretim Kurulu Tarafından, 2022-2023 Eğitim-Öğretim Yılı Bahar Dönemi'ne İlişkin Basın Açıklaması</div>
+                  <p class="watashi-dyeri">Rektörlük</p>
+                </div>
+              </div>
+            </a>
+            <a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded watashi-duyurularRenk" href="https://www.ktu.edu.tr/personel/duyuru/30122022-tarihli-ogretim-gorevlisi-ve-arastirma-gorevlisi-ilani-nihai-degerlendirme-sonuclari" target="_blank" style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+              <div class="row h-100">
+                <div class="col-auto align-self-end" style="padding-left:0px;">            
+                  <h3 class="watashi-duyurugün">13</h3>
+                  <p class="watashi-duyuruay">Şubat</p>       
+                </div>             
+                <div class="col align-self-end" style=" padding-left:0px;">
+                  <div class="watashi-duyuru-yazı-fontu" style="min-height: 54px;">30.12.2022 Tarihli Öğretim Görevlisi ve Araştırma Görevlisi İlanı Nihai Değerlendirme Sonuçları </div>
+                  <p class="watashi-dyeri">Personel Daire Başkanlığı</p>
+                </div>
+              </div>
+            </a>
+            <a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded watashi-duyurularRenk" href="https://www.ktu.edu.tr/tr/duyuru/2022-2023-egitim-ve-ogretim-yili-bahar-donemi-uzaktan-ogretim-yoluyla-tamamlanacaktir" style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+              <div class="row h-100">
+                <div class="col-auto align-self-end" style="padding-left:0px;">            
+                  <h3 class="watashi-duyurugün">11</h3>
+                  <p class="watashi-duyuruay">Şubat</p>       
+                </div>             
+                <div class="col align-self-end" style=" padding-left:0px;">
+                  <div class="watashi-duyuru-yazı-fontu" style="min-height: 54px;">2022-2023 Eğitim ve Öğretim Yılı Bahar Dönemi Uzaktan Öğretim Yoluyla Tamamlanacaktır</div>
+                  <p class="watashi-dyeri">Rektörlük</p>
+                </div>
+              </div>
+            </a>
+            <a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded watashi-duyurularRenk" href="https://www.ktu.edu.tr/tr/duyuru/universitemizde-egitim-ogretime-ara-verildi" style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+              <div class="row h-100">
+                <div class="col-auto align-self-end" style="padding-left:0px;">            
+                  <h3 class="watashi-duyurugün">10</h3>
+                  <p class="watashi-duyuruay">Şubat</p>       
+                </div>             
+                <div class="col align-self-end" style=" padding-left:0px;">
+                  <div class="watashi-duyuru-yazı-fontu" style="min-height: 54px;">Üniversitemizde Eğitim-Öğretime Ara Verildi</div>
+                  <p class="watashi-dyeri">Rektörlük</p>
+                </div>
+              </div>
+            </a>
+            <a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded watashi-duyurularRenk" href="https://www.ktu.edu.tr/personel/duyuru/2022-yili-akademik-tesvik-odenegi-basvuru-sonuclari-nihai-listesi-ilan-edilmistir" target="_blank" style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+              <div class="row h-100">
+                <div class="col-auto align-self-end" style="padding-left:0px;">            
+                  <h3 class="watashi-duyurugün">09</h3>
+                  <p class="watashi-duyuruay">Şubat</p>       
+                </div>             
+                <div class="col align-self-end" style=" padding-left:0px;">
+                  <div class="watashi-duyuru-yazı-fontu" style="min-height: 54px;">2022 Yılı Akademik Teşvik Ödeneği Başvuru Sonuçları Nihai Listesi İlan Edilmiştir</div>
+                  <p class="watashi-dyeri">Personel Daire Başkanlığı</p>
+                </div>
+              </div>
+            </a>
+          </div>  
+        </div>
+      </div>
+    </div>
+    <!--Duyurular butonu-->
+    <div class="row">
+      <div class="col-12" style="text-align: center;color:#fff;margin-top:1rem; line-height: 1.1 !important;">        
+        <a data-bs-target="#carousel-duyuru" data-bs-slide="prev" style="cursor:pointer; padding: 5px 0px 5px 0px;  position: relative; top: -5px;"><i class="fas fa-angle-double-left" style="font-size: 1.3rem;"></i></a> 
+        <span style=" width: 0; height: 0; border-bottom: 24px solid #1eafc7; border-left: 12px solid transparent; position: relative; top: -24px;"></span>
+        <a href="/tr/duyurular" style="border-top-left-radius: 5px; border-top-right-radius: 5px; position: relative; top: -4px;text-decoration:none; color:#FFF; padding: 5px 15px 5px 15px; background-color:#1eafc7; font-size: 14px;">Tüm Duyurular</a><span style=" width: 0; height: 0; border-bottom: 24px solid #1eafc7; border-right: 12px solid transparent; position: relative; top: -24px;"></span>
+        <a data-bs-target="#carousel-duyuru" data-bs-slide="next" style="cursor:pointer; padding: 5px 0px 5px 0px;  position: relative; top: -5px;"><i class="fas fa-angle-double-right" style="font-size: 1.3rem;"></i></a>
+      </div>                        
+    </div>
+
+  </div>
+</div>
+    <style>
+      #prev_haber:hover{
+        background-color: #c14c48 !important;
+        color: #fff !important; 
+      }
+      #next_haber:hover{
+        background-color: #c14c48 !important;
+        color: #fff !important;
+      }
+    </style>
+<!-------------------------------------------DUYURULAR BİTİŞ------------------------------------------>
+
+
+              <!-------------------------------------------------- Barış Koç Başlangıç----------------------------------------------------->
+                      <!-- Ok haber hoverı -->
+                      <style>
+                        #prev_haber:hover{
+                          background-color: #c14c48 !important;
+                          color: #fff !important; 
+                        }
+                        #next_haber:hover{
+                          background-color: #c14c48 !important;
+                          color: #fff !important;
+                        }
+                      </style>
+                  
+                                  <!---------------------------- Haberler ---------------------------->
+                        <div class="container">
+                          <div class = "row">
+                            <div class = "col-12" style = "padding: 0px; padding-top:20px; padding-bottom: 20px;">
+                              <div class = "glayfens_cizgi" style = "border-left:6px solid #00426a !important;"></div>
+                              <div style="float:left;padding-top:7px;">
+                                <h3 style=" font-family: HurmeBold; font-size: 30px;color:#00426a;"> Haberler </h3>
+                              </div>
+                              <div style="float:right;padding-top:5px;font-size:15px;display: flex; align-items: center;">
+                                <a href = "https://www.ktu.edu.tr/tr/haberler" style="text-decoration: none;color:#c14c48; font-size: 14px;"> Tüm Haberler</a>
+                                <a data-bs-target="#carousel-haber" data-bs-slide="prev" style="cursor:pointer;" >
+                                  <i id="prev_haber" class="fas fa-angle-double-left" style="font-size: 24px; padding: 10px 5px 10px 5px;color:#c14c48;"></i>
+                                </a>
+                                <a data-bs-target="#carousel-haber" data-bs-slide="next" style="cursor:pointer;">
+                                  <i id="next_haber" class="fas fa-angle-double-right" style="font-size: 24px; padding: 10px 5px 10px 5px;color:#c14c48;"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                                    <!------------------------- Haberler Sıralama---------------------------->
+                          <div class="carousel slide" id="carousel-haber" data-bs-ride="false" >
+                            <div class = "carousel-inner">
+                                      <!----------------------------------- Haberler 1.Sayfa ---------------------------->
+                              <div class = "carousel-item active">
+                                <div class = "row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 etk">
+                                
+                                      <!---------------------------------- 1. Kolon--------------------------------->
+                                  <div class = "col-4 ryuk-cursor-pointer glayfens-background-renkdegisimi" onclick="location.href='https://www.ktu.edu.tr/tr/haber/ogretim-uyelerimiz-6-subat-kahramanmaras-depremleri-ile-ilgili-sehir-paydaslarini%C2%A0bilgilendirdi';">
+                  
+                                    <div class ="row">
+                                      <img src="https://www.ktu.edu.tr/slayt/haber/EA0c4G.jpg">
+                                    </div>
+                                    <div class = "row glayfens-haberler-baslik">
+                                      <h5>
+                                        Öğretim Üyelerimiz, 6 Şubat Kahramanmaraş Depremleri ile İlgili Şehir Paydaşlarını Bilgilendirdi
+                                      </h5>
+                                    </div>
+                                    <div class="row glayfens_haber_yazi">
+                                      <p>
+                                        Konuşmacılar, Üniversitemiz Mühendislik Fakültesi İnşaat Mühendisliği Bölümü Öğretim Üyesi Prof. Dr. Ahmet Can ALTUNIŞIK ve Jeoloji Mühendisliği Bölümü Öğretim Üyesi Prof. Dr. Hakan ERSOY
+                                      </p>
+                                    </div>
+                                    <div class="row">
+                                      <p style="font-size:14px;margin-bottom:0px;color:#c00600;">
+                                        24 Mart 2023
+                                      </p>
+                                    </div>
+                                    <div class = "row" style="padding-left:11px;padding-right:15px;">
+                                      <div class = "glayfens-col-4" style="border-bottom:3px solid #d1534e;"></div>
+                                      <div class = "glayfens-col-8" style="float:left;border-bottom:3px solid #cdd1d5;"></div>
+                                    </div>
+                                  </div>
+                                              <!-------------------------------- 2. Kolon --------------------------------->
+                                  <div class = "col-4 ryuk-cursor-pointer glayfens-background-renkdegisimi" onclick="location.href='https://www.ktu.edu.tr/tr/haber/kutuphane-haftasinda-universitemizdeki-yazarlarimiz-ile-soylesiimza-programi-duzenlendi-jPe';">
+                  
+                                    <div class ="row">
+                                      <img src = "https://www.ktu.edu.tr/slayt/haber/VTYNrQ.jpg">
+                                    </div>
+                                    <div class = "row glayfens-haberler-baslik">
+                                      <h5>
+                                        Kütüphane Haftası'nda, Üniversitemizdeki Yazarlarımız ile Söyleşi&İmza Programı Düzenlendi
+                                      </h5>
+                                    </div>
+                                    <div class="row glayfens_haber_yazi" style = "padding-bottom: 21px;">
+                                      <p>
+                                        Program, Kütüphane ve Dokümantasyon Daire Başkanlığı ile Kariyer Geliştirme Uygulama ve Araştırma Merkezi ortaklığında gerçekleştirildi.
+                                      </p>
+                                    </div>
+                                    <div class="row">
+                                      <p style="font-size:14px;margin-bottom:0px;color:#c00600;">
+                                        23 Mart 2023
+                                      </p>
+                                    </div>
+                                    <div class = "row" style="padding-left:11px;padding-right:15px;">
+                                      <div class = "glayfens-col-4" style="border-bottom:3px solid #d1534e;"></div>
+                                      <div class = "glayfens-col-8" style="float:left;border-bottom:3px solid #cdd1d5;"></div>
+                                    </div>
+                                  </div>
+                                          <!--------------------------- 3. Kolon ---------------------------->
+                                  <div class = "col-4 ryuk-cursor-pointer glayfens-background-renkdegisimi" onclick="location.href='https://www.ktu.edu.tr/tto/haber/tubitak-2209-a-ve-2209-b-programlarinda-universitemizin-buyuk-basarisi';">
+                  
+                                    <div class ="row">
+                                      <img src = "https://www.ktu.edu.tr/slayt/haber/S9lBdv.jpg ">
+                                    </div>
+                                    <div class = "row glayfens-haberler-baslik" style = "padding-bottom: 20px;">
+                                      <h5>
+                                        TÜBİTAK 2209/A ve 2209/B Programlarında Üniversitemizin Büyük Başarısı
+                                      </h5>
+                                    </div>
+                                    <div class="row glayfens_haber_yazi" style = "padding-bottom: 67px;">
+                                      <p>
+                                        TÜBİTAK 2209/A ve 2209/B Programları
+                                      </p>
+                                    </div>
+                                    <div class="row">
+                                      <p style="font-size:14px;  margin-bottom:0px;  color:#c00600;">
+                                        22 Mart 2023
+                                      </p>
+                                    </div>
+                                    <div class = "row" style="padding-left:11px;padding-right:15px;">
+                                      <div class = "glayfens-col-4" style="border-bottom:3px solid #d1534e;"></div>
+                                      <div class = "glayfens-col-8" style="float:left;border-bottom:3px solid #cdd1d5;"></div>
+                                    </div>
+                                    <div style = "padding-bottom: 40px;"></div>
+                                  </div>
+                                </div>
+                              </div>
+                                                              <!--------------------- Haberler 2.Sayfa -------------------->
+                              <div class = "carousel-item ">
+                                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 etk">
+                                              <!------------------------- 1. Kolon --------------------------->
+                                  <div class = "col-4 ryuk-cursor-pointer glayfens-background-renkdegisimi" onclick="location.href='https://www.ktu.edu.tr/tr/haber/litouter-projesi-kapanis-etkinligi-ktu-denar-1-arastirma-gemisinde-gerceklestirildi-wjB';">
+                                  
+                                    <div class ="row">
+                                      <img src="https://www.ktu.edu.tr/slayt/haber/LD8gdq.jpg">
+                                    </div>
+                                    <div class = "row glayfens-haberler-baslik" style = "padding-bottom: 30px;">
+                                      <h5>
+                                        LitOUTer Projesi Kapanış Etkinliği, KTÜ Denar-1 Araştırma Gemisi'nde Gerçekleştirildi
+                                      </h5>
+                                    </div>
+                                    <div class="row glayfens_haber_yazi">
+                                      <p>
+                                        "Karadeniz Ekosistemini Korumak İçin Halkın Farkındalığının Artırılması ve Deniz Çöplerinin Azaltılması" başlıklı projenin kapanış etkinliği, KTÜ DENAR-1 Araştırma Gemisi'nde gerçekleştirildi.
+                                      </p>
+                                    </div>
+                                    <div class="row">
+                                      <p style="font-size:14px;margin-bottom:0px;color:#c00600;">
+                                        10 Mart 2023
+                                      </p>
+                                    </div>
+                                    <div class = "row" style="padding-left:11px;padding-right:15px;">
+                                      <div class = "glayfens-col-4" style="border-bottom:3px solid #d1534e;"></div>
+                                      <div class = "glayfens-col-8" style="float:left;border-bottom:3px solid #cdd1d5;"></div>
+                                    </div>
+                                  </div>
+                                                 <!------------------------------ 2. Kolon ----------------------------->
+                                  <div class = "col-4 ryuk-cursor-pointer glayfens-background-renkdegisimi" onclick="location.href='https://www.ktu.edu.tr/tr/haber/universitemiz-tum-imkanlariyla-deprem-bolgesinde-ve-depremzede-vatandaslarimizin-yaninda-yer-aliyor';">
+                                    <div class ="row">
+                                      <img src = "https://www.ktu.edu.tr/slayt/haber/Zgv8wC.jpg">
+                                    </div>
+                                    <div class = "row glayfens-haberler-baslik">
+                                      <h5>
+                                        Üniversitemiz Tüm İmkanlarıyla Deprem Bölgesinde ve Depremzede Vatandaşlarımızın Yanında Yer Alıyor
+                                      </h5>
+                                    </div>
+                                    <div class="row glayfens_haber_yazi" style = "padding-bottom: 8px;">
+                                      <p>
+                                        Üniversitemiz tarafından, deprem felaketi sonrasında depremzede vatandaşlara ve öğrencilere yönelik yürütülen çalışmaları içeren bir rapor hazırlandı.
+                                      </p>
+                                    </div>
+                                    <div class="row">
+                                      <p style="font-size:14px;margin-bottom:0px;color:#c00600;">
+                                        09 Mart 2023
+                                      </p>
+                                    </div>
+                                    <div class = "row" style="padding-left:11px;padding-right:15px;">
+                                      <div class = "glayfens-col-4" style="border-bottom:3px solid #d1534e;"></div>
+                                      <div class = "glayfens-col-8" style="float:left;border-bottom:3px solid #cdd1d5;"></div>
+                                    </div>
+                                  </div>
+                                            <!-------------------------- 3. Kolon --------------------------->
+                                  <div class = "col-4 ryuk-cursor-pointer glayfens-background-renkdegisimi" onclick="location.href='https://www.ktu.edu.tr/tr/haber/universitemiz-topluma-katki-sunacak-iki-protokole-imza-atti';">
+                                    <div class ="row">
+                                      <img src = "https://www.ktu.edu.tr/slayt/haber/XTI0i6.jpg ">
+                                    </div>
+                                    <div class = "row glayfens-haberler-baslik" style = "padding-bottom: 20px;">
+                                      <h5>
+                                        Üniversitemiz Topluma Katkı Sunacak İki Protokole İmza Attı
+                                      </h5>
+                                    </div>
+                                    <div class="row glayfens_haber_yazi" style = "padding-bottom: 10px;">
+                                      <p>
+                                        Üniversitemiz, Trabzon İl Milli Eğitim Müdürlüğü ve Trabzon İl Emniyet Müdürlükleri ile topluma hizmet amacı taşıyan eğitim ve iş birliği odaklı iki protokole imza attı.
+                                      </p>
+                                    </div>
+                                    <div class="row">
+                                      <p style="font-size:14px;  margin-bottom:0px;  color:#c00600;">
+                                        07 Mart 2023
+                                      </p>
+                                    </div>
+                                    <div class = "row" style="padding-left:11px;padding-right:15px;">
+                                      <div class = "glayfens-col-4" style="border-bottom:3px solid #d1534e;"></div>
+                                      <div class = "glayfens-col-8" style="float:left;border-bottom:3px solid #cdd1d5;"></div>
+                                    </div>
+                                    <div style = "padding-bottom: 55px;"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                  
+                            <style>    
+                              #prev_etk:hover{
+                                background-color: #fff !important;
+                                color: #ef233c !important; 
+                              }
+                              #next_etk:hover{
+                                background-color: #fff !important;
+                                color: #ef233c !important;
+                              }
+                              
+                              .etk .col:not(:first-child){
+                                padding-left: 25px;
+                              }
+                            </style>
+                  
+                              <!------------------------- Etkinlikler ----------------------------->
+                        <div class = "container-fluid" style="background-color: #ef233c;">
+                          <div class = "container">
+                            <div class = "row" >
+                              <div class = "col-12" style = "padding: 0px; padding-top:20px; padding-bottom: 20px;">
+                                <div class = "glayfens_cizgi" style = "border-left:6px solid #ffffff !important;"></div>
+                                <div style="float:left;padding-top:7px;">
+                                  <h3 style=" font-family: HurmeBold; font-size: 30px;color:#ffffff;"> Etkinlikler </h3>
+                                </div>
+                                <div style="float:right;padding-top:5px;font-size:15px;display: flex; align-items: center;">
+                                  <a href = "https://www.ktu.edu.tr/tr/etkinlikler" style="text-decoration: none;color:#ffffff; font-size: 14px;"> Tüm Etkinlikler</a>
+                                  <a data-bs-target="#carousel-etkinlik" data-bs-slide="prev" style="cursor:pointer;" >
+                                    <i id="prev_etk" class="fas fa-angle-double-left" style="font-size: 24px; padding: 10px 5px 10px 5px;color:#ffffff;"></i>
+                                  </a>
+                                  <a data-bs-target="#carousel-etkinlik" data-bs-slide="next" style="cursor:pointer;">
+                                    <i id="next_etk" class="fas fa-angle-double-right" style="font-size: 24px; padding: 10px 5px 10px 5px;color:#ffffff;"></i>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                  
+                                        <!----------------------------- Etkinlik Sıralama 1. Sayfa---------------------------------------->
+                            <div class="carousel slide" id="carousel-etkinlik" data-bs-ride="false" >
+                              <div class = "carousel-inner">
+                                <div class = "carousel-item active">
+                                  <div class = "row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-4 etk">
+                                        <!---------------------------- 1.Kolon --------------------------------->
+                                    <div class = "col-5 ryuk-cursor-pointer" onclick="location.href='https://www.ktu.edu.tr/radyotv/etkinlik/ramazan-ayinda-beslenme-onerileri';">
+                                      <div class = "row">
+                                        <div class = "col-auto">
+                                          <div class = "glayfens-etkinlikler-tarih">
+                                            03
+                                          </div>
+                                          <p class = "glayfens-ay" style = "color: #c30707;">
+                                            Nisan
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <div class ="row glayfens-etkinlikler-cizgi" >
+                                        <img src="https://www.ktu.edu.tr/slayt/etk/rJW6VN.jpg">
+                                      </div>
+                                      <div class = "row glayfens-etkinlikler-baslik">
+                                        <h8>
+                                          Ramazan Ayında Beslenme Önerileri
+                                        </h8>
+                                      </div>
+                                      <div class="row glayfens-etkinlikler-yazi">
+                                        <p>
+                                          Prof.Dr.Bahittin Kahveci KTÜ TV'nin konuğu olacaktır.
+                                        </p>
+                                      </div>
+                                      <div class="row" style="color:#fff;">
+                                        <div class="glayfens-col-8" style="font-family: HurmeSemiBold; font-size: 14px;">
+                                          <i class="fas fa-map-marker-alt">
+                                          </i>
+                                          Radyo/TV                     
+                                        </div>
+                                        <div class = "glayfens-col-4" style="font-family: HurmeSemiBold; font-size: 14px;">
+                                          <i class="fas fa-clock"></i>
+                                          10:00
+                                        </div>
+                                      </div>
+                                    </div>
+                                             <!--------------------------- 2.Kolon ------------------------------>
+                                    <div class = "col-5 ryuk-cursor-pointer" onclick="location.href='https://www.ktu.edu.tr/akademi/etkinlik/180-gunluk-eylem-plani-sonuc-raporu-bilgilendirme-toplantisi';">
+                                      <div class = "row">
+                                        <div class = "col-auto">
+                                          <div class = "glayfens-etkinlikler-tarih">
+                                            03
+                                          </div>
+                                          <p class = "glayfens-ay" style = "color: #c30707;">
+                                            Nisan
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <div class ="row glayfens-etkinlikler-cizgi" >
+                                        <img src="https://www.ktu.edu.tr/slayt/etk/wItD4P.jpg">
+                                      </div>
+                                      <div class = "row glayfens-etkinlikler-baslik">
+                                        <h8>
+                                          180 Günlük Eylem Planı Sonuç Raporu Bilgilendirme Toplantısı
+                                        </h8>
+                                      </div>
+                                      <div class="row glayfens-etkinlikler-yazi" style = "padding-bottom: 18px;">
+                                        <p>
+                                          5. Eylem Dönemi Sonuç Raporu Bilgilendirme 
+                                        </p>
+                                      </div>
+                                      <div class="row" style="color:#fff;">
+                                        <div class="glayfens-col-8" style="font-family: HurmeSemiBold; font-size: 14px;">
+                                          <i class="fas fa-map-marker-alt">
+                                          </i>
+                                          KTÜ Uzaktan Eğitim Sistemi                   
+                                        </div>
+                                        <div class = "glayfens-col-4" style="font-family: HurmeSemiBold; font-size: 14px;">
+                                          <i class="fas fa-clock"></i>
+                                          13:30
+                                        </div>
+                                      </div>
+                                    </div>
+                                              <!--------------------------------- 3.Kolon -------------------------------->
+                                    <div class = "col-5 ryuk-cursor-pointer" onclick="location.href='https://www.ktu.edu.tr/tr/etkinlik/8-uluslararasi-saglik-bilimleri-ve-yonetimi-kongresi';">
+                                      <div class = "row">
+                                        <div class = "col-auto">
+                                          <div class = "glayfens-etkinlikler-tarih">
+                                            02
+                                          </div>
+                                          <p class = "glayfens-ay" style = "color: #cc0a0a;">
+                                            Mayıs
+                                          </p>
+                                        </div>
+                                        <div class = "col-auto">
+                                          <div class = "glayfens-etkinlikler-tarih">
+                                            06
+                                          </div>
+                                          <p class = "glayfens-ay" style = "color: #c30707;">
+                                            Mayıs
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <div class ="row glayfens-etkinlikler-cizgi">
+                                        <img src="https://www.ktu.edu.tr/slayt/etk/j3gueQ.jpg">
+                                      </div>
+                                      <div class = "row glayfens-etkinlikler-baslik ">
+                                        <h8>
+                                          8. Uluslararası Sağlık Bilimleri ve Yönetimi Kongresi
+                                        </h8>
+                                      </div>
+                                      <div class="row glayfens-etkinlikler-yazi">
+                                        <p>
+                                          Sağlıkta İnsan Kaynakları Yönetimi ve İstihdam Sorunları
+                                        </p>
+                                      </div>
+                                      <div class="row" style="color:#fff;">
+                                        <div class="glayfens-col-8" style="font-family: HurmeSemiBold; font-size: 14px;">
+                                          <i class="fas fa-map-marker-alt">
+                                          </i>
+                                          KTÜ                    
+                                        </div>
+                                        <div class = "glayfens-col-4" style="font-family: HurmeSemiBold; font-size: 14px;">
+                                          <i class="fas fa-clock"></i>
+                                          09:00
+                                        </div>
+                                      </div>
+                                    </div>
+                                              <!--------------------------- 4.Kolon ------------------------------->
+                                    <div class = "col-5 ryuk-cursor-pointer" onclick="location.href='https://www.ktu.edu.tr/tr/etkinlik/7-uluslararasi-adli-hemsirelik-kongresi';">
+                                      <div class = "row">
+                                        <div class = "col-auto">
+                                          <div class = "glayfens-etkinlikler-tarih">
+                                            08
+                                          </div>
+                                          <p class = "glayfens-ay" style = "color: #c30707;">
+                                            Mayıs
+                                          </p>
+                                        </div>
+                                        <div class = "col-auto">
+                                          <div class = "glayfens-etkinlikler-tarih">
+                                            10
+                                          </div>
+                                          <p class = "glayfens-ay" style = "color: #c30707;">
+                                            Mayıs
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <div class ="row">
+                                        <img src="https://www.ktu.edu.tr/slayt/etk/R7atGF.jpg">
+                                      </div>
+                                      <div class = "row glayfens-etkinlikler-baslik">
+                                        <h8>
+                                          7. Uluslararası Adli Hemşirelik Kongresi
+                                        </h8>
+                                      </div>
+                                      <div class="row glayfens-etkinlikler-yazi" style = "padding-bottom: 18px;">
+                                        <p>
+                                          7. International Forensic Nursing Congress
+                                        </p>
+                                      </div>
+                                      <div class="row" style="color:#fff;">
+                                        <div class="glayfens-col-8" style="font-family: HurmeSemiBold; font-size: 14px;">
+                                          <i class="fas fa-map-marker-alt">
+                                          </i>
+                                          KTÜ OKM                    
+                                        </div>
+                                        <div class = "glayfens-col-4" style="font-family: HurmeSemiBold; font-size: 14px;">
+                                          <i class="fas fa-clock"></i>
+                                          17:00
+                                        </div>
+                                        <div style = "padding-bottom: 40px;"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                       <!---------------------------- Etkinlikler 2. sayfa ---------------------------->
+                                <div class = "carousel-item ">
+                                  <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-4 etk">
+                                             <!------------------- 1.Kolon---------------------------->
+                                    <div class = "col-5 ryuk-cursor-pointer" onclick="location.href='https://www.ktu.edu.tr/batidilleri/etkinlik/9th-international-ktudell-conference';">
+                                      <div class = "row" >
+                                        <div class = "col-auto">
+                                          <div class = "glayfens-etkinlikler-tarih">
+                                            05
+                                          </div>
+                                          <p class = "glayfens-ay" style = "color: #c30707;">
+                                            Haziran
+                                          </p>
+                                        </div>
+                                        <div class = "col-auto">
+                                          <div class = "glayfens-etkinlikler-tarih">
+                                            09
+                                          </div>
+                                          <p class = "glayfens-ay" style = "color: #c30707;">
+                                            Haziran
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <div class ="row glayfens-etkinlikler-cizgi" >
+                                        <img src="https://www.ktu.edu.tr/slayt/etk/aoWV9o.jpg">
+                                      </div>
+                                      <div class = "row glayfens-etkinlikler-baslik">
+                                        <h8>
+                                          Karadeniz Technical University The 4th International Erasmus+ Staff Week / 5-9 June 2023
+                                        </h8>
+                                      </div>
+                                      <div class="row glayfens-etkinlikler-yazi">
+                                        <p>
+                                          4th International Erasmus+ Staff Week / 5-9 June 2023
+                                        </p>
+                                      </div>
+                                      <div class="row" style="color:#fff;">
+                                        <div class="glayfens-col-8" style="font-family: HurmeSemiBold; font-size: 14px;">
+                                          <i class="fas fa-map-marker-alt">
+                                          </i>
+                                          KTU Office of Exchange                     
+                                        </div>
+                                        <div class = "glayfens-col-4" style="font-family: HurmeSemiBold; font-size: 14px;">
+                                          <i class="fas fa-clock"></i>
+                                          17:00
+                                        </div>
+                                      </div>
+                                    </div>
+                                                <!---------------------- 2.Kolon------------------------>
+                                    <div class = "col-5 ryuk-cursor-pointer" onclick="location.href='https://www.ktu.edu.tr/batidilleri/etkinlik/9th-international-ktudell-conference';">
+                                      <div class = "row">
+                                        <div class = "col-auto">
+                                          <div class = "glayfens-etkinlikler-tarih">
+                                            25
+                                          </div>
+                                          <p class = "glayfens-ay" style = "color: #c30707;">
+                                            Eylül
+                                          </p>
+                                        </div>
+                                        <div class = "col-auto">
+                                          <div class = "glayfens-etkinlikler-tarih">
+                                            26
+                                          </div>
+                                          <p class = "glayfens-ay" style = "color: #c30707;">
+                                            Eylül
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <div class ="row glayfens-etkinlikler-cizgi" >
+                                        <img src="https://www.ktu.edu.tr/slayt/etk/a3SKUg.jpg">
+                                      </div>
+                                      <div class = "row glayfens-etkinlikler-baslik" style = "padding-bottom: 50px;">
+                                        <h8>
+                                            9th International KTUDELL Conference
+                                        </h8>
+                                      </div>
+                                      <div class="row glayfens-etkinlikler-yazi" style = "padding-bottom: 16px;">
+                                        <p>
+                                          9th International KTUDELL Conference
+                                        </p>
+                                      </div>
+                                      <div class="row" style="color:#fff;">
+                                        <div class="glayfens-col-8" style="font-family: HurmeSemiBold; font-size: 14px;">
+                                          <i class="fas fa-map-marker-alt">
+                                          </i>
+                                          Osman Turan Convention Center                   
+                                        </div>
+                                        <div class = "glayfens-col-4" style="font-family: HurmeSemiBold; font-size: 14px;">
+                                          <i class="fas fa-clock"></i>
+                                          10:00
+                                        </div>
+                                      </div>
+                                    </div>
+                                                       <!----------------------- 3.Kolon --------------------------->
+                                    <div class = "col-5 ryuk-cursor-pointer" onclick="location.href='https://www.ktu.edu.tr/tr/etkinlik/2022-2023-buyu-yorum-okuma-listesi';">
+                                      <div class = "row">
+                                        <div class = "col-auto">
+                                          <div class = "glayfens-etkinlikler-tarih">
+                                            26
+                                          </div>
+                                          <p class = "glayfens-ay" style = "color: #cc0a0a;">
+                                            Ekim
+                                          </p>
+                                        </div>
+                                        <div class = "col-auto">
+                                          <div class = "glayfens-etkinlikler-tarih">
+                                            14
+                                          </div>
+                                          <p class = "glayfens-ay" style = "color: #c30707;">
+                                            Haziran
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <div class ="row glayfens-etkinlikler-cizgi">
+                                        <img src="https://www.ktu.edu.tr/slayt/etk/CL0692.jpg">
+                                      </div>
+                                      <div class = "row glayfens-etkinlikler-baslik " style = "padding-bottom: 48px;">
+                                        <h8>
+                                            2022-2023 Büyü/Yorum Okuma Listesi
+                                        </h8>
+                                      </div>
+                                      <div class="row glayfens-etkinlikler-yazi" style = "padding-bottom: 17px;">
+                                        <p>
+                                          Toplantılar her ayın 4. haftası Çarşamba günleri
+                                        </p>
+                                      </div>
+                                      <div class="row" style="color:#fff;">
+                                        <div class="glayfens-col-8" style="font-family: HurmeSemiBold; font-size: 14px;">
+                                          <i class="fas fa-map-marker-alt">
+                                          </i>
+                                          Çevrim içi                    
+                                        </div>
+                                        <div class = "glayfens-col-4" style="font-family: HurmeSemiBold; font-size: 14px;">
+                                          <i class="fas fa-clock"></i>
+                                          21:00
+                                        </div>
+                                      </div>
+                                    </div>
+                                              <!--------------------- 4.Kolon-------------------------->
+                                    <div class = "col-5 ryuk-cursor-pointer" onclick="location.href='https://www.ktu.edu.tr/iibf/etkinlik/vii-uluslararasi-muhasebe-ve-finans-sempozyumu';">
+                                      <div class = "row">
+                                        <div class = "col-auto">
+                                          <div class = "glayfens-etkinlikler-tarih">
+                                            01
+                                          </div>
+                                          <p class = "glayfens-ay" style = "color: #c30707;">
+                                            Kasım
+                                          </p>
+                                        </div>
+                                        <div class = "col-auto">
+                                          <div class = "glayfens-etkinlikler-tarih">
+                                            04
+                                          </div>
+                                          <p class = "glayfens-ay" style = "color: #c30707;">
+                                            Kasım
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <div class ="row">
+                                        <img src="https://www.ktu.edu.tr/slayt/etk/waAlFW.jpg">
+                                      </div>
+                                      <div class = "row glayfens-etkinlikler-baslik" style = "padding-bottom: 20px;">
+                                        <h8>
+                                            VII. Uluslararası Muhasebe ve Finans Sempozyumu
+                                        </h8>
+                                      </div>
+                                      <div class="row glayfens-etkinlikler-yazi">
+                                        <p>
+                                            VII. Uluslararası Muhasebe ve Finans Sempozyumu
+                                        </p>
+                                      </div>
+                                      <div class="row" style="color:#fff;">
+                                        <div class="glayfens-col-8" style="font-family: HurmeSemiBold; font-size: 14px;">
+                                          <i class="fas fa-map-marker-alt">
+                                          </i>
+                                          KTÜ OKM                    
+                                        </div>
+                                        <div class = "glayfens-col-4" style="font-family: HurmeSemiBold; font-size: 14px;">
+                                          <i class="fas fa-clock"></i>
+                                          10:00
+                                        </div>
+                                        <div style = "padding-bottom: 40px;"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                  
+                          <!------------------------------- Akademik Başarılar ---------------------------->
+                          <div class = "container-fluid ryuk-erisim-linkleri">
+                            <div class = "container">
+                              <div class = "row" >
+                                <div class = "col-12" style = "padding: 0px; padding-top:20px; padding-bottom: 20px;">
+                                  <div class = "glayfens_cizgi" style = "border-left:6px solid #e0a526 !important;"></div>
+                                  <div style="float:left;padding-top:7px;">
+                                    <h3 style=" font-family: HurmeBold; font-size: 30px;color:#e0a526;"> Akademik Başarılar </h3>
+                                  </div>
+                                </div>
+                              </div>
+                              <!---------------------- Akademik Başarılar Sıralama --------------------->
+                              <div class="carousel slide" id="carousel-basari" data-bs-ride="false" >
+                                <div class = "carousel-inner">
+                                  <!----------------------------- Akademik Başarılar 1.Sayfa --------------------------->
+                                  <div class = "carousel-item active">
+                                    <div class = "row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-4 etk">
+                                      <!---------------------------------- 1. Kolon--------------------------------->
+                                    <div class = "col-4 ryuk-cursor-pointer glayfens-background-renkdegisimi2 " onclick="location.href='https://www.ktu.edu.tr/tr/basari/universitemiz-akademisyenlerinin-universite-sanayi-is-birligine-katkisi';">
+                  
+                                      <div class ="row ">
+                                        <img src="https://www.ktu.edu.tr/slayt/haber/B0AYpE.jpg">
+                                      </div>
+                                      <div class = "row glayfens-akademikbasarilar-yazi glayfens-text-renkdegisimi">
+                                        <h5>
+                                          Üniversitemiz Akademisyenlerinin Üniversite-Sanayi iş Birliğine Katkısı
+                                        </h5>
+                                      </div>
+                                    </div>
+                                                <!-------------------------------- 2. Kolon --------------------------------->
+                                    <div class = "col-4 ryuk-cursor-pointer glayfens-background-renkdegisimi2" onclick="location.href='https://www.ktu.edu.tr/tr/basari/akademisyenimiz-prof-dr-hakan-karsli-ve-ekibine-tubitak-1002-c-kapsaminda-proje-destegi';">
+                  
+                                      <div class ="row">
+                                        <img src = "https://www.ktu.edu.tr/slayt/haber/PsunPc.jpg">
+                                      </div>
+                                      <div class = "row glayfens-akademikbasarilar-yazi glayfens-text-renkdegisimi">
+                                        <h5>
+                                          Akademisyenimiz Prof. Dr. Hakan KARSLI ve Ekibine, TÜBİTAK 1002-C Kapsamında Proje Desteği
+                                        </h5>
+                                      </div>
+                                    </div>
+                                            <!--------------------------- 3. Kolon---------------------------->
+                                    <div class = "col-4 ryuk-cursor-pointer glayfens-background-renkdegisimi2" onclick="location.href='https://www.ktu.edu.tr/tr/basari/prof-dr-tulay-ilhan-nasa-tubitak-proje-destegi-85j';">
+                  
+                                      <div class ="row">
+                                        <img src = "https://www.ktu.edu.tr/slayt/haber/hVDskU.jpg">
+                                      </div>
+                                      <div class = "row glayfens-akademikbasarilar-yazi glayfens-text-renkdegisimi" style = "padding-bottom: 20px;">
+                                        <h5>
+                                          Prof. Dr. Tülay İLHAN NAS'a TÜBİTAK Proje Desteği
+                                        </h5>
+                                      </div>
+                                    </div>
+                                            <!--------------------------- 4. Kolon---------------------------->
+                                    <div class = "col-4 ryuk-cursor-pointer glayfens-background-renkdegisimi2" onclick="location.href='https://www.ktu.edu.tr/tr/basari/prof-dr-ahmet-can-altunisika-tubitak-proje-destegi-EIO';">
+                  
+                                      <div class ="row">
+                                        <img src = "https://www.ktu.edu.tr/slayt/haber/d8sg2V.jpg ">
+                                      </div>
+                                      <div class = "row glayfens-akademikbasarilar-yazi glayfens-text-renkdegisimi" style = "padding-bottom: 20px;">
+                                        <h5>
+                                          Prof. Dr. Ahmet Can ALTUNIŞIK'a TÜBİTAK Proje Desteği
+                                        </h5>
+                                      </div>
+                                      <div style = "padding-bottom: 40px;"></div>       
+                                    </div>
+                                  </div>
+                                </div>
+                                  <!----------------------------- Akademik Başarılar 2.Sayfa --------------------------->
+                                <div class = "carousel-item ">
+                                  <div class = "row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-4 etk">
+                                    <!---------------------------------- 1. Kolon--------------------------------->
+                                  <div class = "col-4 ryuk-cursor-pointer glayfens-background-renkdegisimi2" onclick="location.href='https://www.ktu.edu.tr/tr/basari/dr-ogr-uyesi-selcen-uzun-durana-tubitak-proje-destegi';">
+                  
+                                    <div class ="row">
+                                      <img src="https://www.ktu.edu.tr/slayt/haber/JQ1T4n.jpg">
+                                    </div>
+                                    <div class = "row glayfens-akademikbasarilar-yazi glayfens-text-renkdegisimi">
+                                      <h5>
+                                        Dr. Öğr. Üyesi Selcen UZUN DURAN'a TÜBİTAK Proje Desteği
+                                      </h5>
+                                    </div>
+                                  </div>
+                                              <!-------------------------------- 2. Kolon --------------------------------->
+                                  <div class = "col-4 ryuk-cursor-pointer glayfens-background-renkdegisimi2" onclick="location.href='https://www.ktu.edu.tr/tr/basari/doc-dr-umit-ertugrula-tubitak-proje-destegi';">
+                  
+                                    <div class ="row">
+                                      <img src = "https://www.ktu.edu.tr/slayt/haber/jdbaid.jpg">
+                                    </div>
+                                    <div class = "row glayfens-akademikbasarilar-yazi glayfens-text-renkdegisimi">
+                                      <h5>
+                                        Doç. Dr. Ümit ERTUĞRUL'a TÜBİTAK Proje Desteği
+                                      </h5>
+                                    </div>
+                                  </div>
+                                          <!--------------------------- 3. Kolon---------------------------->
+                                  <div class = "col-4 ryuk-cursor-pointer glayfens-background-renkdegisimi2" onclick="location.href='https://www.ktu.edu.tr/tr/basari/doc-dr-temel-varola-tubitak-proje-destegi';">
+                  
+                                    <div class ="row">
+                                      <img src = "https://www.ktu.edu.tr/slayt/haber/jRcY5S.jpg">
+                                    </div>
+                                    <div class = "row glayfens-akademikbasarilar-yazi glayfens-text-renkdegisimi" style = "padding-bottom: 20px;">
+                                      <h5>
+                                        Doç. Dr. Temel VAROL'a TÜBİTAK Proje Desteği
+                                      </h5>
+                                    </div>
+                                  </div>
+                                          <!--------------------------- 4. Kolon---------------------------->
+                                  <div class = "col-4 ryuk-cursor-pointer glayfens-background-renkdegisimi2" onclick="location.href='https://www.ktu.edu.tr/tr/basari/ogr-gor-dr-ugur-arasa-tubitak-proje-destegi';">
+                  
+                                    <div class ="row">
+                                      <img src = "https://www.ktu.edu.tr/slayt/haber/faOL7b.jpg ">
+                                    </div>
+                                    <div class = "row glayfens-akademikbasarilar-yazi glayfens-text-renkdegisimi" style = "padding-bottom: 20px;">
+                                      <h5>
+                                        Öğr. Gör. Dr. Uğur ARAS'a TÜBİTAK Proje Desteği
+                                      </h5>
+                                    </div>
+                                    <div style = "padding-bottom: 40px;"></div>       
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                                                 <!-------------------------- Başarı Kaydırıcı ---------------------------->
+                            <div class = "row">
+                              <div class = "glayfens-col-12" style="text-align: center;color:#e0a526;margin-top:1rem; line-height: 1.1 !important; padding-top: 15px;">
+                                <a data-bs-target="#carousel-basari" data-bs-slide="prev" style="cursor:pointer; padding: 5px 0px 5px 0px;  position: relative; top: -5px;">
+                                  <i class="fas fa-angle-double-left" style="font-size: 1.3rem;"></i>
+                                </a>
+                                <span style=" width: 0; height: 0; border-bottom: 24px solid #e0a526; border-left: 12px solid transparent; position: relative; top: -24px;"></span>
+                                <a href = "https://www.ktu.edu.tr/tr/basarilar " style="border-top-left-radius: 5px; border-top-right-radius: 5px; position: relative; top: -4px;text-decoration:none; color:#FFF; padding: 5px 15px 5px 15px; background-color:#e0a526; font-size: 14px;">
+                                  Tüm Başarılarımız
+                                </a>
+                                <span style=" width: 0; height: 0; border-bottom: 24px solid #e0a526; border-right: 12px solid transparent; position: relative; top: -24px;"></span>
+                                <a data-bs-target="#carousel-basari" data-bs-slide="next" style="cursor:pointer; padding: 5px 0px 5px 0px;  position: relative; top: -5px;">
+                                  <i class="fas fa-angle-double-right" style="font-size: 1.3rem;"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                  
+                                        <!---------------------------------- Proje Bölümü ----------------------------------->
+                        <div class="container-fluid">
+                          <div class="container" style="margin-bottom: 40px;">
+                            <div class = "row" >
+                              <div class="col-12 col-sm-12 col-md-3 col-lg-3 d-flex align-items-center" style="padding: 0;background: linear-gradient(to left, #f5f5f5 50%, transparent 50%);">
+                                <span style=" width: 0; height: 77px; border-top: 70px solid #c14c48; border-left: 36px solid transparent; position: relative; top: 0;"></span>
+                                <span style="border-bottom-left-radius: 10px; position: relative; top: 0;text-decoration:none; color:#FFF; padding: 5px 15px 5px 15px; background-color:#c14c48; font-size: 30px; font-family: HurmeBold; width: 100%; height: 77px; padding-top: 15px;"> Proje Çağrıları</span>
+                                <span style=" width: 0; height: 77px; border-top: 77px solid #c14c48; border-right: 36px solid transparent; position: relative; top: 0;"></span>
+                              </div>
+                              <div class="col-12 col-sm-12 col-md-8 col-lg-8 " style="background-color: #f5f5f5;">
+                                <div id="carousel-proje" class="carousel slide" data-bs-ride="false" style="margin-top: 13px; margin-bottom: 12px;">
+                                  <div class="carousel-inner">
+                                    <!--------------------------- 1.Sayfa --------------------------->
+                                    <div class="carousel-item active">
+                                      <a href = "https://www.ktu.edu.tr/tr/projecagrisi/avrupa-yenilik-ve-teknoloji-enstitusu-eit-tarafindan-yurutulen-digital-venture-program-basvurulari-bekliyor" style="text-decoration: none;">
+                                      <div class = "row ">
+                                        <div class="col-auto glayfens-proje1">
+                                          <h3 style="margin:0px; font-family: HurmeBold; font-size: 30px; line-height: 24px; color: #c14c48;">31</h3>
+                                          <p class="glayfens-dp1 " style = "background-color:#c14c48 ;color: #ffffff;">Mart</p>
+                                        </div>
+                                        <div class="col glayfens.proje2" style = "color: #c14c48;">
+                                          <h6> Avrupa Yenilik ve Teknoloji Enstitüsü (EIT) Tarafından Yürütülen Digital Venture Program Başvuruları Bekliyor</h6>
+                                        </div>
+                                      </div>
+                                      </a>
+                                    </div>
+                                    <!--------------------------- 2.Sayfa ---------------------------->
+                                    <div class="carousel-item ">
+                                      <a href = "https://www.ktu.edu.tr/tr/projecagrisi/2568-tubitak-cin-bilimler-akademisi-cas-ikili-isbirligi-programi-2023-yili-proje-cagrisi" style="text-decoration: none;">
+                                      <div class = "row">
+                                        <div class="col-auto glayfens-proje1">
+                                          <h3 style="margin:0px; font-family: HurmeBold; font-size: 30px; line-height: 24px; color: #c14c48;">31</h3>
+                                          <p class="glayfens-dp1" style = "background-color:#c14c48 ;color: #ffffff;">Mart</p>
+                                        </div>
+                                        <div class="col glayfens.proje2" style = "color: #c14c48;">
+                                          <h6> 2568 TÜBİTAK-Çin Bilimler Akademisi (CAS) İkili İşbirliği Programı 2023 Yılı Proje Çağrısı</h6>
+                                        </div>
+                                      </div>
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                                    <!------------------------------- Şekili Düzeltme -------------------------------->
+                              <div class="d-none d-md-block col-md-1 col-lg-1" style="padding: 0;">
+                                <div style="border-bottom-right-radius: 10px; position: relative; top: 0;text-decoration:none; color:#FFF; padding: 5px 15px 5px 15px; background-color:#f5f5f5;  width: 68%; height: 77px; float: left;"></div>
+                                <span style=" width: 0; border-top: 72px solid #f5f5f5; border-right: 36px solid transparent; position: relative; top: 35px;"></span>
+                              </div>
+                            </div>
+                            <!------------------------ İleri ve Geri Ayarları ----------------------------->
+                            <div class="row justify-content-end">
+                              <div class="col-auto" style="padding: 0px; padding-right: 55px;"> 
+                                <div style="font-size:14px;display: flex; align-items: center;">
+                                  <a href = "" style="text-decoration: none; color: #c14c48;">Tüm Çağrılar</a>
+                                  <span style=" width: 0; border-top: 24px solid #c14c48; border-left: 10px solid transparent; position: relative; top: -4px;"></span>
+                                  <div style="background-color: #c14c48;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;">
+                                    <a data-bs-target="#carousel-proje" data-bs-slide="prev" style="cursor:pointer;">
+                                      <i id="prev_prj" class="fas fa-angle-double-left" style="font-size: 24px; padding: 4px; color: #fff;"></i>
+                                    </a>
+                                    <a data-bs-target="#carousel-proje" data-bs-slide="next" style="cursor:pointer;">
+                                      <i id="next_prj" class="fas fa-angle-double-right" style="font-size: 24px; padding: 4px; color: #fff;"></i>
+                                    </a>
+                                  </div>
+                                  <span style=" width: 0; border-top: 24px solid #c14c48; border-right: 10px solid transparent; position: relative; top: -4px;"></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                  
+                  <!-------------------------------------------------- Barış Koç Bitiş----------------------------------------------------->
+
+                  <!-- --------------------- İrem Öztürk Devam -------------------- -->
+<!-------------------------------------------SAYILARLA KTÜ BAŞLANGIÇ----------------------------------->
+
+<div class="container-fluid">
+  <!--Sayılarla KTÜ yazısı için-->
+  <div class="container">
+    <div class="row">
+      <div class="col-12" style="padding:15px 0px">
+        <div style="float:left;width:20px;height:50px;border-left:6px solid #00426a;"></div>
+        <div style="float:left;padding-top:7px">
+          <a href="http://sayilarla.ktu.edu.tr/" target="_blank" style="color:#00426a; font-family:'Franklin Gothic Medium'; font-size: 32px; text-decoration: none;">sayılarla KTÜ
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Alt kısımdakiler-->
+  <div class="container">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+      <div class="watashi-sayılarfont" style="margin: 10px;">
+        <i class="fas fa-book-reader" style="font-size: 60px"></i>
+        <h3 class="watashi-countersayi">30882</h3>
+        <p class="watashi-sayibaslik">Öğrenci</p>
+      </div>
+      <div class="watashi-sayılarfont" style="margin: 10px;">
+        <i class="fas fa-graduation-cap" style="font-size: 60px"></i>
+        <h3 class="watashi-countersayi">249761</h3>
+        <p class="watashi-sayibaslik">Mezun</p>
+      </div>
+      <div class="watashi-sayılarfont" style="margin: 10px;">
+        <i class="fas fa-user-graduate" style="font-size: 60px"></i>
+        <h3 class="watashi-countersayi">2141</h3>
+        <p class="watashi-sayibaslik">Akademik Personel</p>
+      </div>
+      <div class="watashi-sayılarfont" style="margin: 10px;">
+        <i class="fas fa-user-tie" style="font-size: 60px"></i>
+        <h3 class="watashi-countersayi">3141</h3>
+        <p class="watashi-sayibaslik">İdari Personel</p>
+      </div>
+      <div class="watashi-sayılarfont" style="margin: 10px;">
+        <i class="fas fa-school" style="font-size: 60px"></i>
+        <h3 class="watashi-countersayi">254</h3>
+        <p class="watashi-sayibaslik">Aktif Program</p>
+      </div>
+      <div class="watashi-sayılarfont" style="margin: 10px;">
+        <i class="fas fa-check-double" style="font-size: 60px"></i>
+        <h3 class="watashi-countersayi">26</h3>
+        <p class="watashi-sayibaslik">Akredite Birim</p>
+      </div>
+      <div class="col d-none d-md-block watashi-sayılarfont" style="margin: 10px;">
+        <i class="fas fa-users" style="font-size: 60px"></i>
+        <h3 class="watashi-countersayi">30</h3>
+        <p class="watashi-sayibaslik">Öğretim Üyesi Başına Öğrenci</p>
+      </div>
+      <div class="col d-none d-md-block watashi-sayılarfont" style="margin: 10px;">
+        <i class="fas fa-book" style="font-size: 60px"></i>
+        <h3 class="watashi-countersayi">2452178</h3>
+        <p class="watashi-sayibaslik">Kütüphane Kaynağı</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--------------------------------SAYILARLA KTÜ BİTİŞ-------------------------------------------------->
+<!-----------------------------------LOGO BAŞLANGIÇ---------------------------------------------------->
+<div class=" container-fluid">
+  <div class="container">
+    <div class="row bg-white justify-content-center" style="padding-bottom:30px; padding-top: 30px; ">
+      <div class="watashi-col-auto watashi-col-logo">
+        <a href="https://www.teknofest.org/tr/" target="_blank">
+        <img class="watashi-img-fluid watashi-logo" style="max-width: 60px;" src="https://www.ktu.edu.tr/image/logo/other/teknofest.png" alt="Teknofest">
+        </a>
+      </div>
+      <div class="watashi-col-auto watashi-col-logo ">
+        <a href="https://www.yok.gov.tr/" target="_blank">
+          <img class="watashi-img-fluid watashi-logo" style="max-width: 60px;" src="https://www.ktu.edu.tr/image/logo/other/yok.png" alt="Yüksek Öğretim Kurulu">
+        </a>
+      </div>
+      <div class="watashi-col-auto watashi-col-logo">
+        <a href="https://www.studyinturkey.gov.tr/" target="_blank">
+          <img class="watashi-img-fluid watashi-logo" style="max-width: 60px;" src="https://www.ktu.edu.tr/image/logo/other/study.png" alt="Study in Turkey">
+        </a>
+      </div>
+      <div class="watashi-col-auto watashi-col-logo">
+        <a  class="watashi-logoRenk" href="https://eua.eu/" target="_blank">
+          <img class="watashi-img-fluid watashi-logo" style="max-width: 60px;" src="https://www.ktu.edu.tr/image/logo/other/eua.png" alt="European University Association">
+        </a>
+      </div>
+      <div class="watashi-col-auto watashi-col-logo">
+        <a href="https://yuzikibinbursu.yok.gov.tr/" target="_blank">
+          <img class="watashi-img-fluid watashi-logo" style="max-width: 60px;" src="https://www.ktu.edu.tr/image/logo/other/yok_doktora_burslari.png" alt="YÖK 100/2000 Doktora Bursları">
+        </a>
+      </div>
+      <div class="watashi-col-auto watashi-col-logo">
+        <a href="https://sifiratik.gov.tr/" target="_blank">
+          <img class="watashi-img-fluid watashi-logo" style="max-width: 60px;" src="	https://www.ktu.edu.tr/image/logo/other/sifiratik.png" alt="Sıfır Atık">
+        </a>
+      </div>
+      <div class="watashi-col-auto watashi-col-logo">
+        <a href="https://www.ilan.gov.tr/" target="_blank">
+          <img class="watashi-img-fluid watashi-logo" style="max-width: 60px;" src="https://www.ktu.edu.tr/image/logo/other/ilan.jpg" alt="İlan">
+        </a>
+      </div>
+      <div class="watashi-col-auto watashi-col-logo">
+        <a href="https://www.trabzonteknokent.com.tr/" target="_blank">
+          <img class="watashi-img-fluid watashi-logo" style="max-width: 60px;" src="https://www.ktu.edu.tr/image/logo/other/teknokent.png" alt="Trabzon Teknokent">
+        </a>
+      </div>
+      <div class="watashi-col-auto watashi-col-logo">
+        <a href="http://www.kuvakfi.org.tr/" target="_blank">
+          <img class="watashi-img-fluid watashi-logo" style="max-width: 60px;" src="https://www.ktu.edu.tr/image/logo/other/kuvakfi.png" alt="Karadeniz Üniversitesi Güçlendirme Vakfı">
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-------------------------------------------LOGO BİTİŞ------------------------------------------------>
+
+
+<!------------------------------------ALT KISIM BAŞLANGIÇ---------------------------------------------------->
+<div class="container-fluid" style="background-color:#2d2d2d;">
+  <div class="container" style="padding-top: 20px !important; padding-bottom: 10px !important;">
+
+    <!---İlk satırı 4 e böldük ve 4 parçayı da sırayla doldurduk---->
+    <div class="row row-cols-auto">
+      <!--1.parça-->
+      <div class="col-12 col-sm-12 col-md-5 col-lg-3">
+        <img src="https://www.ktu.edu.tr/image/Logo2.png" style="max-width:325px;">
+      </div>
+
+      <!--2.parça-->
+      <div class="col-md-4 col-lg-3" style="color: #fff; margin-top: 20px;">
+        <div style ="display: flex; align-items: center;" >
+          <div style="float:left;margin-right:5px;font-size:24px;">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div style="float:left;font-size:12px;">Karadeniz Teknik Üniversitesi, 61080, Trabzon, Türkiye</div>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <div style="float:left;margin-right:5px;font-size:24px;">
+            <i class="fas fa-at"></i>
+          </div>
+          <div style="float:left;font-size:12px;">kik@ktu.edu.tr</div>
+        </div>
+      </div>
+    
+      <!--3.parça-->
+      <div class = "col-12 col-sm-12 col-md-3 col-lg-2" style=" color: #fff;margin-top: 20px;font-size:24px;">
+        <div style="display: flex; align-items: center;">
+          <div style="float:left;margin-right:5px;font-size:24px;">
+            <i class="fas fa-phone-square-alt"></i>
+          </div>
+          <div style="float:left;font-size:12px;">+90 462 377 3000</div>
+          </div>
+          <div style="display: flex; align-items: center;">
+            <div style="float:left;margin-right:5px;font-size:24px;">
+              <i class="fas fa-fax"></i>
+            </div>  	
+            <div style="float:left;font-size:12px;">+90 462 325 32 05 - 325 31 85</div> 
+          </div>
+      </div>
+      <!--4.parça-->
+      <div class="col-auto ms-auto ryuk-cursor-pointer" style=" color: #fff; margin-top: 20px;">
+        <img class="float-end " src="	https://www.ktu.edu.tr/image/app-store.png" onclick="location.href='https://apps.apple.com/tr/app/kt%C3%BC-mobil/id1078885434?l=tr';" style="margin-left: 15px;">
+        <a href="https://play.google.com/store/apps/details?id=ktu.mobil&hl=tr" target="_blank">
+          <img class="float-end" src="https://www.ktu.edu.tr/image/google-play.png">
+        </a>
+      </div>
+    </div>
+
+    <!--2.satıra başlıyoruz-->
+    <div class="row row-cols-auto">
+      <!--1.parça-->
+      <div class="col-md-9 col-m" style="padding:15px;color: #fff; font-size: 12px; display: flex; align-items: center;">© 2022 Karadeniz Teknik Üniversitesi. Tüm Hakları Saklıdır</div>
+      <!--2.parça-->
+      <a class="col-auto ms-auto "  href="https://www.facebook.com/tcktu1955" target="_blank" style="padding:15px;color: #fff; font-size:32px;">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+      <a  href="https://twitter.com/tcktu1955" target="_blank" style="color: #fff; padding: 15px; font-size: 32px;">
+        <i class="fab fa-twitter-square"></i>
+      </a>
+      <a href="https://www.linkedin.com/school/ktu1955/" target="_blank" style="color: #fff;padding: 15px; font-size: 32px;">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.youtube.com/tcktu1955" target="_blank" style="color: #fff;padding: 15px; font-size: 32px;">
+        <i class="fab fa-youtube-square"></i>
+      </a>
+      <a href="https://www.instagram.com/tcktu1955" target="_blank" style="color: #fff;padding: 15px; font-size: 32px;">
+        <i class="fab fa-instagram-square"></i>
+      </a>
+    </div>
+      
+  </div>
+</div>
+<!---------------------------------------ALT KISIM BİTİŞ------------------------------------------------>
+
+
+    <script>
+      
+      $(document).ready(function() {
+
+      $('.counter').each(function () {
+      $(this).prop('Counter',0).animate({
+      Counter: $(this).text()
+      }, {
+      duration: 5000,
+      easing: 'swing',
+      step: function (now) {
+      $(this).text(Math.ceil(now));
+      }
+      });
+      });
+
+      });
+    </script>
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function myFunctionKurumsal() {
+        var x = document.getElementById("kurumsalID");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // make it as accordion for smaller screens
+        if (window.innerWidth < 992) {
+          // close all inner dropdowns when parent is closed
+          document
+            .querySelectorAll(".navbar .dropdown")
+            .forEach(function (everydropdown) {
+              everydropdown.addEventListener("hidden.bs.dropdown", function () {
+                // after dropdown is hidden, then find all submenus
+                this.querySelectorAll(".submenu").forEach(function (
+                  everysubmenu
+                ) {
+                  // hide every submenu as well
+                  everysubmenu.style.display = "none";
+                });
+              });
+            });
+
+          document
+            .querySelectorAll(".dropdown-menu a")
+            .forEach(function (element) {
+              element.addEventListener("click", function (e) {
+                let nextEl = this.nextElementSibling;
+                if (nextEl && nextEl.classList.contains("submenu")) {
+                  // prevent opening link if link needs to open dropdown
+                  e.preventDefault();
+                  if (nextEl.style.display == "block") {
+                    nextEl.style.display = "none";
+                  } else {
+                    nextEl.style.display = "block";
+                  }
+                }
+              });
+            });
+        }
+        // end if innerWidth
+      });
+      // DOMContentLoaded  end
+    </script>
+  </body>
+</html>
