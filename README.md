@@ -1,1 +1,1 @@
-# KT-ANASAYFA
+# KTÜ-ANASAYFA
